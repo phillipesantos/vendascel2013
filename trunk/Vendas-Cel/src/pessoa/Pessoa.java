@@ -2,7 +2,7 @@ package pessoa;
 
 public class Pessoa {
 
-	private String nome;
+	private String nome; 
 	private String sobrenome;
 	private String datadenascimento;
 	private boolean sexo;
