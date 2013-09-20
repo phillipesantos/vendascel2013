@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ALPOO Project
+		</title>
+		<style type="text/css">
+			body{
+					background-image: url('bg-t.jpg');
+					background-repeat: repeat-x;
+				}
+			.MenuCima:link, .MenuCima:visited {
+												text-decoration:none;
+												font-family:Verdana, Arial;
+												font-size:70%;
+												color:#00BFFF;
+					}
+			.MenuCima:hover {
+								font-family:Verdana, Arial;
+								font-size:70%;
+								color:white;
+					}
+			.tabela1	{
+							position:absolute;
+							top:12%;
+							left:35%;
+							margin:0px;
+							padding:0px;
+					}
+			input[type=submit] {
+								background:none;
+								border: 1px solid #0d2c52;
+								background:white;
+					}
+		</style>
+	</head>
+	<body>
+		<!--audio autoplay loop>
+			<source src="Epic_Sax.mp3" type="audio/mpeg">
+		</audio-->
+		<form>
+
+			<a href="tela1.html" target="conteudo"><img src="IMG\logoTT.png"></a>
+			
+						<!-- INICIO DA TABELA 1 -->
+
+			<table class="tabela1" border="0" cellspacing="0" align="center">
+				<tr>
+					<td valign=bottom align="center">
+						<input type="text" style="height:30px;" size="80px" name="barra_busca"  placeholder="O que procura?" />
+					</td>
+					<td valign=bottom align="center">
+						<input type="submit" style="height:30px;" value="Buscar" />
+					</td>
+					<td align="center">
+						<a href="#.html" target="conteudo" class="MenuCima" style="margin-left:45px; margin-right:5px;">Cadastre-se </a> <font color="#00BFFF;">|</font>
+					</td>
+					<td align="center">
+						<a href="login.html" target="conteudo" class="MenuCima" style="margin:5px;">Entre </a> <font color="#00BFFF;">|</font>
+					</td>
+					<td align="center">
+						<a href="contato.html" target="conteudo" class="MenuCima" style="margin:5px;">Contato</a>
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+			<!-- FIM DA TABELA 1 -->
+			<!-- INICIO DA TABELA 2 -->
+			
+				</table>
+				<table class="tabela2" border="0" cellspacing="0" height="240%">
+					<tr>
+						<td height="1%"> </td>
+					</tr>
+					<tr>
+						<td width="15%"> <!-- MENU LATERAL -->
+							<iframe src="MenuLateral.html" name="MenuLateral" width="100%" height="100%" frameborder="0"></iframe>
+						</td>
+						<td width="95%"> <!-- AREA DE CONTEUDO -->
+							<iframe src="tela1.html" name="conteudo" width="100%" height="100%" frameborder="0"></iframe>
+						</td>
+					</tr>
+				</table>
+			
+				<!-- FIM DA TABELA 2 -->
+			
+	</body>
+</html>
