@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	
+		<title>Cadastro de Produtos</title>
+		
+		<style type="text/css">
+			table{
+					border-style:solid;
+					border-width:1px;
+					border-color:#999999;
+					padding: 16px;
+					background:#bfe2e4;
+					color:white;
+				}
+			#validarBusca{
+							background:none;
+							border: 1px solid #0d2c52;
+							background:white;
+						}
+		</style>
+		
+	</head>
+	
+	<body>
+		<font size="5" color="#bfe2e4" face="Verdana, Arial">Cadastro de Produto</font>
+			<hr />
+			
+			<br />
+	
+			<font face="Verdana, Arial">
+			<center>
+
+				<form id="form1">
+
+					<table id="tabela1" border="0" width="61%">
+						<tr>
+							<td align="right">Pesquisa de Produdo: </td>
+							<td>
+								<input type="text" id="campoPesquisaP" name="campoPesquisaP" style="height:30px;" size="35px" />
+								<input type="button" id="validarBusca"  name="validarBusca" style="height:30px;" value="Pesquisar" />
+							</td>
+						</tr>
+					</table>
+
+				</form>
+
+				<br />
+
+				<form id="form2">
+
+					<table id="tabela2" border="0">
+
+						<tr>
+							<td align="right">Nome: </td>
+							<td><input type="text" id="campoNome" name="campoNome" required/></td>
+						</tr>
+
+						<tr>
+							<td align="right">Fabricante: </td>
+							<td><input type="text" id="campoFabricante" mame="campoFabricante" required/></td>
+						</tr>
+
+						<tr>
+							<td align="right">Sistema Operacional: </td>
+							<td><input type="text" id="campoSO" name="campoSO" required  /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Cor: </td>
+							<td><input type="text" id="campoCor" name="campoCor" required/></td>
+						</tr>
+
+						<tr>
+							<td align="right">Tamanho: </td>
+							<td><input type="text" id="campoTamanho" name="campoTamanho" required />mm</td>
+						</tr>
+
+						<tr>
+							<td align="right">Tamanho da Tela: </td>
+							<td><input type="text" id="campoTamanhoTela"  name="campoTamanhoTela" required /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Modelo: </td>
+							<td><input type="text" id="campoModelo" name="campoModelo" required /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Conexão: </td>
+							<td><input type="text" id="campoConexao" name="campoConexao" required /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Câmera: </td>
+							<td><input type="text" id="campoCamera" name="campoCamera" required /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Música: </td>
+							<td><input type="text" id="campoMusica" name="campoMusica" required /></td>
+						</tr>
+
+						<tr>
+							<td align="right">Memória Interna: </td>
+							<td><input type="number" min="1" max="100" id="campoMemoriaInterna" name="campoMemoriaInterna" required />GB</td>
+						</tr>
+
+						<tr>
+							<td align="right">Cartão de Memória: </td>
+							<td>
+								<select  id="selectCartaoMemoria" name="selectCartaoMemoria" required>
+								  <option value="">--Selecione--</option>
+								  <option value="true">Sim</option>
+								  <option value="false">Não</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">GPRS: </td>
+							<td>
+								<select  id="selectGPRS"  name="selectGPRS" required>
+								  <option value="">--Selecione--</option>
+								  <option value="true">Sim</option>
+								  <option value="false">Não</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">GPS: </td>
+							<td>
+								<select  id="selectGPS" name="selectGPS" required>
+								  <option value="">--Selecione--</option>
+								  <option value="true">Sim</option>
+								  <option value="false">Não</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">Rádio: </td>
+							<td>
+								<select  id="selectRadio" name="selectRadio" required>
+								  <option value="">--Selecione--</option>
+								  <option value="true">Sim</option>
+								  <option value="false">Não</option>
+								</select>
+							</td>
+						</tr>
+	
+						<tr>
+							<td align="right">Vídeo Player: </td>
+							<td>
+								<select  id="selectVideoPlayer" name="selectVideoPlayer" required>
+								  <option value="">--Selecione--</option>
+								  <option value="true">Sim</option>
+								  <option value="false">Não</option>
+								</select>
+							</td>
+						</tr>
+
+						<tr>			
+							<td align="right">Quantidade: </td>
+							<td><input type="number" id="campoQuantidade" name="campoQuantidade" required/></td>
+						</tr>
+
+						<tr>
+							<td align="right">Preço(R$): </td>
+							<td><input type="text" id="campoPreco" name="campoPreco" required  /></td>
+						</tr>
+
+						<tr>
+							<td><br /></td>
+						<tr>
+
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<input type="submit" style="height:70px;" value="SALVAR" />
+								<input type="button" style="height:70px;" value="ALTERAR" />
+								<input type="button" style="height:70px;" value="EXCLUIR" />
+							</td>
+						</tr>
+
+					</table>
+				</form>	
+				
+			</center>
+		</font>	
+	</body>
+	
+</html>
