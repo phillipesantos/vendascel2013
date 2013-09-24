@@ -40,9 +40,9 @@ public class ServletProduto extends HttpServlet {
 		produto.setMusica(request.getParameter("campoMusica"));
 		produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 
-		//String url = "JSP/resultado.jsp?Nome="+ campoNome + "&Fabrican="+campoFabricante+ "&SO="+campoSO;
+		String url = "JSP/resultado.jsp?Nome="+ produto.getNome() + "&Fabricante="+produto.getFabricante()+"&SO="+produto.getSistemaOperacional();
 		
-		//response.sendRedirect(url);
+		response.sendRedirect(url);
 	}
 
 }
