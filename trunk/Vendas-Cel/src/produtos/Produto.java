@@ -14,12 +14,7 @@ public class Produto {
 	private String conexao;
 	private String camera;
 	private String musica;
-	private int memoriaInterna=0;
-	private boolean cartaoMemoria;
-	private boolean gprs;
-	private boolean gps;
-	private boolean radio;
-	private boolean videoPlayer;
+	private String memoriaInterna;
 	private int quantidade=0;
 	private double preco=0;
 	
@@ -126,54 +121,14 @@ private IProdutosDAO produtosDAO = new ProdutoDAO();
 		this.musica = musica;
 	}
 
-	
-	public int getMemoriaInterna() {
+		
+	public String getMemoriaInterna() {
 		return memoriaInterna;
 	}
-	public void setMemoriaInterna(int memoriaInterna) {
+	public void setMemoriaInterna(String memoriaInterna) {
 		this.memoriaInterna = memoriaInterna;
 	}
-	
-	
-	public boolean isCartaoMemoria() {
-		return cartaoMemoria;
-	}
-	public void setCartaoMemoria(boolean cartaoMemoria) {
-		this.cartaoMemoria = cartaoMemoria;
-	}
-	
-	
-	public boolean isGprs() {
-		return gprs;
-	}
-	public void setGprs(boolean gprs) {
-		this.gprs = gprs;
-	}
-	
-	
-	public boolean isGps() {
-		return gps;
-	}
-	public void setGps(boolean gps) {
-		this.gps = gps;
-	}
-	
-	
-	public boolean isRadio() {
-		return radio;
-	}
-	public void setRadio(boolean radio) {
-		this.radio = radio;
-	}
-	
 
-	public boolean isVideoPlayer() {
-		return videoPlayer;
-	}
-	public void setVideoPlayer(boolean videoPlayer) {
-		this.videoPlayer = videoPlayer;
-	}
-	
 	
 	public int getQuantidade() {
 		return quantidade;
