@@ -10,12 +10,12 @@ public class Venda {
 	private int id;
 	
 	
-	
 	VendaDAO vendaDAO;
 	
 	public void salvarVenda()
 	{
 		vendaDAO.addVenda(this);
+		produto.setQuantidade(produto.getQuantidade() - 1);
 	}
 	
 	public Cliente getCliente() {

@@ -2,12 +2,6 @@ package produtos;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 
 @WebServlet("/ServletProduto")
 public class ServletProduto extends HttpServlet {
@@ -27,6 +21,7 @@ public class ServletProduto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();	
+	
 		
 		produto.setNome(request.getParameter("campoNome"));
 		produto.setFabricante(request.getParameter("campoFabricante"));
@@ -40,9 +35,11 @@ public class ServletProduto extends HttpServlet {
 		produto.setMusica(request.getParameter("campoMusica"));
 		produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 
-		String url = "JSP/resultado.jsp?Nome="+ produto.getNome() + "&Fabricante="+produto.getFabricante()+"&SO="+produto.getSistemaOperacional();
 		
-		response.sendRedirect(url);
+		
+		String url = "JSP/resultado.jsp?Nome="+ produto.getNome() + "&Fabrican="+produto.get+ "&SO="+campoSO;
+			//response.sendRedirect(url);
 	}
 
 }
+
