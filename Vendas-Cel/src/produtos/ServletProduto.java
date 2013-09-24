@@ -38,10 +38,6 @@ public class ServletProduto extends HttpServlet {
 				produto.setMusica(request.getParameter("campoMusica"));
 				produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 				produtodao.addProduto(produto);
-				
-								
-				String url = "JSP/resultado.jsp?Nome="+ produto.getNome() + "&Fabrican="+produto.getFabricante()+ "&SO="+produto.getSistemaOperacional();
-				response.sendRedirect(url);
 	}
 
 }
