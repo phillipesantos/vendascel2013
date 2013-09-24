@@ -38,6 +38,23 @@ public class ServletProduto extends HttpServlet {
 				produto.setMusica(request.getParameter("campoMusica"));
 				produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 				produtodao.addProduto(produto);
+				
+				
+				
+				response.getWriter().println("<html>");
+				response.getWriter().println("<head>");
+				response.getWriter().println("<title> Resposta do servidor </title>");
+				response.getWriter().println("</head>");
+		 
+				response.getWriter().println("<body>");
+				  
+				response.getWriter().println("seu nome cadastrado foi: \n" + produto.getNome() +"<br>");
+
+				
+				//response.getWriter().println("<a href='passiente.html'>Voltar</a>");
+				response.getWriter().println("</body>");
+				         
+				response.getWriter().println("</html>");
 	}
 
 }
