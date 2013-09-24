@@ -21,6 +21,8 @@
 						}
 		</style>
 		
+		<script type="text/javascript" src="JS/ApenasNumeros.js"></script>
+		
 	</head>
 	
 	<body>
@@ -109,7 +111,7 @@
 						
 						<tr>			
 							<td align="right">Quantidade: </td>
-							<td><input type="text" id="campoQuantidade" name="campoQuantidade" required/></td>
+							<td><input type="text" id="campoQuantidade" name="campoQuantidade" required onkeypress="return somenteNumeros(event);"/></td>
 						</tr>
 
 						<tr>
