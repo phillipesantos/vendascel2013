@@ -25,6 +25,7 @@ public class ServletProduto extends HttpServlet {
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		Produto produto = new Produto();	
 		
 		produto.setNome(request.getParameter("campoNome"));
@@ -39,7 +40,9 @@ public class ServletProduto extends HttpServlet {
 		produto.setMusica(request.getParameter("campoMusica"));
 		produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 
+		//String url = "JSP/resultado.jsp?Nome="+ campoNome + "&Fabrican="+campoFabricante+ "&SO="+campoSO;
 		
+		//response.sendRedirect(url);
 	}
 
 }
