@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%= request.getParameter("campoNome") %><br>
+<%= request.getParameter("campoNome") %>
 
 
 </body>
