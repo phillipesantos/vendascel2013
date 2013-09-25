@@ -1,8 +1,8 @@
-function mascaraCpf(cpf){
-								if(cpf.value.length==2){ 
-									cpf.value=cpf.value+"/";
-								}else if(cpf.value.length==5) {
-									cpf.value=cpf.value+"/";
+function mascaraDataDeNascimento(DataDeNascimento){
+								if(DataDeNascimento.value.length==2){ 
+									DataDeNascimento.value=DataDeNascimento.value+"/";
+								}else if(DataDeNascimento.value.length==5) {
+									DataDeNascimento.value=DataDeNascimento.value+"/";
 								}
 						}
 								
