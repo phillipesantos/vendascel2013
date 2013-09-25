@@ -16,7 +16,7 @@
 		
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
-		<script type="text/javascript" src="JS/ApenasNumeros.js"></script>
+		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
 		
 	</head>
 	
@@ -106,7 +106,7 @@
 						
 						<tr>			
 							<td align="right">Quantidade: </td>
-							<td><input type="text" id="campoQuantidade" name="campoQuantidade" required onkeypress="return mascaraTelefone(event);"/></td>
+							<td><input type="text" id="campoQuantidade" name="campoQuantidade" onkeypress="return somenteNumeros(event);""/></td>
 						</tr>
 
 						<tr>
