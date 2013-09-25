@@ -93,15 +93,15 @@
 </tr>
 <tr>
     <td>CPF:</td>
-	<td><input type="text" size="30px" maxlength="14" name="cpf"></td>
+	<td><input type="text" size="30px" maxlength="14" name="cpf" onkeypress="mascaraCpf(this); return somenteNumeros(event);"></td>
 </tr>
 <tr>
     <td>Identidade:</td>
-	<td><input type="text" size="30px" maxlength="9" name="identidade"></td>
+	<td><input type="text" size="30px" maxlength="9" name="identidade" onkeypress="mascaraIdentidade(this); return somenteNumeros(event);"></td>
 </tr>
 <tr>
     <td>Telefone:</td>
-	<td><input type="text" size="30px" maxlength="13" name="telefone"></td>
+	<td><input type="text" size="30px" maxlength="13" name="telefone" onkeypress="mascaraTelefone(this); return somenteNumeros(event);"></td>
 </tr>
 <tr>
     <td>Id:</td>
