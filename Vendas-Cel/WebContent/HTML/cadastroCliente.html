@@ -5,6 +5,7 @@
 <script type="text/javascript" src="JS/mascaraCpf.js"></script>
 <script type="text/javascript" src="JS/mascaraIdentidade.js"></script>
 <script type="text/javascript" src="JS/mascaraTelefone.js"></script>
+<script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
 
 <meta charset="ISO-8859-1">
 
@@ -35,7 +36,7 @@
 </tr>
 <tr>
     <td>Data De Nascimento:</td>
-	<td><input type="text" size="20px"  maxlength="30" name="datadenascimento"></td>
+	<td><input type="text" size="20px"  maxlength="30" name="datadenascimento" onkeypress="mascaraDataDeNascimento(this); return somenteNumeros(event);"></td>
 </tr>
 <tr>
     <td>Logradouro:</td>
