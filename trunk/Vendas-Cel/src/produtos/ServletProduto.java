@@ -18,7 +18,13 @@ public class ServletProduto extends HttpServlet {
        
     }
 
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = null;
 		ProdutoController produtoController = null;
@@ -42,7 +48,11 @@ public class ServletProduto extends HttpServlet {
 						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
 				
 				//Lança as informações obtidas em um HTML
-				response.getWriter().println("<html>");
+				
+				String url = "respostaDoServlet.jsp?campoNome="+ produto.getNome();
+				response.sendRedirect(url);
+				
+				/*response.getWriter().println("<html>");
 				response.getWriter().println("<head>");
 				response.getWriter().println("<title> Dados do Produto </title>");
 				response.getWriter().println("</head>");
@@ -60,14 +70,7 @@ public class ServletProduto extends HttpServlet {
 				response.getWriter().println("Quantidade: \n" + produto.getQuantidade() +"<br>");
 				response.getWriter().println("Preço: \n" + produto.getPreco() +"<br>");
 				response.getWriter().println("</body>");
-    			response.getWriter().println("</html>");
-		
-	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+    			response.getWriter().println("</html>");*/
 		
 	}
 
