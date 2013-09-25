@@ -11,7 +11,6 @@ private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
 	
 	public void addProduto(Produto produto){
 		meusProdutos.add(produto);
-		produto.setId( produto.getPonteiro() + 1);
 	}
 
 	

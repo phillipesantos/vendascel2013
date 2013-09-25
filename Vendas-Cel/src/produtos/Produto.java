@@ -13,7 +13,6 @@ public class Produto {
 	private String modelo;
 	private String conexao;
 	private String camera;
-	private String musica;
 	private String memoriaInterna;
 	private int quantidade=0;
 	private double preco=0;
@@ -111,14 +110,6 @@ private IProdutosDAO produtosDAO = new ProdutoDAO();
 	}
 	public void setCamera(String camera) {
 		this.camera = camera;
-	}
-	
-	
-	public String getMusica() {
-		return musica;
-	}
-	public void setMusica(String musica) {
-		this.musica = musica;
 	}
 
 		
