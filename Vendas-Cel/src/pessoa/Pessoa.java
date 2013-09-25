@@ -7,15 +7,23 @@ public class Pessoa {
 	private String datadenascimento;
 	private boolean sexo;
 	private Endereco endereco;
+	private String cpf;
+	private String identidade;
 	
-	public Endereco getEndereco() {
-		return endereco;
+	public String getCpf() {
+		return cpf;
 	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getIdentidade() {
+		return identidade;
+	}
+	public void setIdentidade(String identidade) {
+		this.identidade = identidade;
 	}
 	public String getNome() {
-	return nome;
+		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -38,5 +46,13 @@ public class Pessoa {
 	public void setSexo(boolean sexo) {
 		this.sexo = sexo;
 	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+
 }
 	
