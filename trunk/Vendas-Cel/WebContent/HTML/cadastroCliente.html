@@ -6,6 +6,8 @@
 <script type="text/javascript" src="JS/mascaraIdentidade.js"></script>
 <script type="text/javascript" src="JS/mascaraTelefone.js"></script>
 <script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
+<script type="text/javascript" src="JS/mascaraCep.js"></script>
+<script type="text/javascript" src="JS/mascaraValidacaoDasSenhas.js"></script>
 
 <meta charset="ISO-8859-1">
 
@@ -115,11 +117,11 @@
 </tr>
 <tr>
     <td align="right">Senha:</td>
-	<td><input type="password" size="30px" maxlength="20" name="senha"></td>
+	<td><input type="password" size="30px" maxlength="20" name="senha" onkeypress="mascaraValidacaoDasSenhas(this);></td>
 </tr>
 <tr>
     <td align="right">Repetir Senha:</td>
-	<td><input type="password" size="30px" maxlength="20" name="repetirsenha"></td>
+	<td><input type="password" size="30px" maxlength="20" name="repetirsenha" onkeypress="mascaraValidacaoDasSenhas(this);></td>
 </tr>
 
 <tr>
