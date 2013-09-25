@@ -8,6 +8,8 @@ public class Cliente extends Pessoa{
 	private String email;
 	private String senha;
 	private String confirmarsenha;
+	private String telefone;
+	
 	public String getId() {
 		return id;
 	}
