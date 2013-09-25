@@ -9,19 +9,7 @@ public class Pessoa {
 	private Endereco endereco;
 	private String cpf;
 	private String identidade;
-	
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getIdentidade() {
-		return identidade;
-	}
-	public void setIdentidade(String identidade) {
-		this.identidade = identidade;
-	}
+	private String telefone;
 	public String getNome() {
 		return nome;
 	}
@@ -52,6 +40,26 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getIdentidade() {
+		return identidade;
+	}
+	public void setIdentidade(String identidade) {
+		this.identidade = identidade;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+	
 	
 
 }
