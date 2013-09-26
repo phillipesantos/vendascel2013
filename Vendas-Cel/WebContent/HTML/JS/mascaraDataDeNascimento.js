@@ -1,6 +1,6 @@
 function mascaraDataDeNascimento(campoNascimento){
 	var expReg = /^(([0-2]\d|[3][0-1])\/([0]\d|[1][0-2])\/[1-2][0-9]\d{2})$/;
-	var msgErro = 'Formato inválido de data.';
+	var msgErro = "Formato inválido de data.";
 	if ((campoNascimento.value.match(expReg)) && (campoNascimento.value!='')){
 	var dia = campoNascimento.value.substring(0,2);
 	var mes = campoNascimento.value.substring(3,5);
