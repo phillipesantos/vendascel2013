@@ -1,9 +1,9 @@
 function mascaraDataDeNascimento(campoNascimento)
 {
-	if(cep.value.length==2){ 
-		cep.value=cep.value+"/";
-	}else if(cep.value.length==5) {
-		cep.value=cep.value+"/";
+	if(campoNascimento.value.length==2){ 
+		campoNascimento.value=campoNascimento.value+"/";
+	}else if(campoNascimento.value.length==5) {
+		campoNascimento.value=cep.value+"/";
 	}
 
 }
