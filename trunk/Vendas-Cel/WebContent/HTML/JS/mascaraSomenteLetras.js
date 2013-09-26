@@ -1,6 +1,6 @@
-function mascaraSomenteLetras(e){
+function mascaraSomenteLetras(a){
 		if (document.all){var evt=event.keyCode;}
-		else{var evt = e.charCode;}
+		else{var evt = a.charCode;}
 		var chr = String.fromCharCode(evt);
 //			var re = /[A-Za-z]/; // permite apenas de A-Z e de a-z
 		var re = /[A-Za-z\s-ÃÕÑÁÉÍÓÚÀÜÇãõñáéíóúàçü]/; // permite de A-Z, a-z, espaços,
