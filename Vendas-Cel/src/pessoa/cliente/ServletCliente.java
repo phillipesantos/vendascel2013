@@ -36,8 +36,7 @@ public class ServletCliente extends HttpServlet {
 				cliente.setNome(request.getParameter("nome"));
 				cliente.setSobrenome(request.getParameter("sobrenome"));
 				cliente.setDatadenascimento(request.getParameter("datadenascimento"));
-				cliente.setSexo(request.getParameter("sexo"));
-				cliente.setTamanho(request.getParameter("campoTamanho"));
+				cliente.setEndereco(request.getParameter("endereco"));
 				cliente.setTamanhoTela(request.getParameter("campoTamanhoTela"));
 				cliente.setModelo(request.getParameter("campoModelo"));
 				cliente.setConexao(request.getParameter("campoConexao"));
