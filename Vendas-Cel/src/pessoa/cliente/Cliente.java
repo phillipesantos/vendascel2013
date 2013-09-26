@@ -8,6 +8,17 @@ public class Cliente extends Pessoa{
 	private String senha;
 	private String confirmarsenha;
 	
+	
+	ClienteDAO clienteDAO = new ClienteDAO();
+	
+	public void salvar() {
+		
+		clienteDAO.addCliente(this);
+	}	
+	
+
+	
+	
 	public String getEmail() {
 		return email;
 	}
@@ -28,12 +39,7 @@ public class Cliente extends Pessoa{
 	}
 	
 	
-	public void salvar() {
-		
-			ClienteDAO.addCliente(this);
-		}	
-		
-	}
+	
 	
 
 
