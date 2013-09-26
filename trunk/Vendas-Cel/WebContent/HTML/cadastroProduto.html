@@ -17,7 +17,7 @@
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
 		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
-		<script type="text/javascript" src="campoEmBrancoProduto.js"></script>
+		<script type="text/javascript" src="JS/campoEmBrancoProduto.js"></script>
 		
 	</head>
 	
@@ -46,7 +46,7 @@
 
 				<br />
 
-				<form id="form2" action="ServletProduto" method="post">
+				<form id="form2" action="ServletProduto" method="post" onsubmit="campoEmBrancoProduto()">
 
 					<table id="tabela2" border="0">
 
@@ -116,7 +116,7 @@
 
 						<tr>
 							<td>
-								<input type="submit" style="height:70px;" value="SALVAR"  onclick="campoEmBrancoProduto()"/>
+								<input type="submit" style="height:70px;" value="SALVAR" />
 								<input type="button" style="height:70px;" value="ALTERAR" />
 								<input type="button" style="height:70px;" value="EXCLUIR" />
 							</td>
