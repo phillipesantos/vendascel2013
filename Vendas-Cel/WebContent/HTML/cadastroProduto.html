@@ -17,6 +17,7 @@
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
 		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
+		<script type="text/javascript" src="campoEmBrancoVenda.js"></script>
 		
 	</head>
 	
@@ -51,52 +52,52 @@
 
 						<tr>
 							<td align="right">Nome: </td>
-							<td><input type="text" id="campoNome" name="campoNome" required/></td>
+							<td><input type="text" id="campoNome" name="campoNome"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Fabricante: </td>
-							<td><input type="text" id="campoFabricante" mame="campoFabricante" required/></td>
+							<td><input type="text" id="campoFabricante" mame="campoFabricante"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Sistema Operacional: </td>
-							<td><input type="text" id="campoSO" name="campoSO" required  /></td>
+							<td><input type="text" id="campoSO" name="campoSO"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Cor: </td>
-							<td><input type="text" id="campoCor" name="campoCor" required/></td>
+							<td><input type="text" id="campoCor" name="campoCor"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Tamanho: </td>
-							<td><input type="text" id="campoTamanho" name="campoTamanho" required />mm</td>
+							<td><input type="text" id="campoTamanho" name="campoTamanho"/>mm</td>
 						</tr>
 
 						<tr>
 							<td align="right">Tamanho da Tela: </td>
-							<td><input type="text" id="campoTamanhoTela"  name="campoTamanhoTela" required /></td>
+							<td><input type="text" id="campoTamanhoTela"  name="campoTamanhoTela"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Modelo: </td>
-							<td><input type="text" id="campoModelo" name="campoModelo" required /></td>
+							<td><input type="text" id="campoModelo" name="campoModelo"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Conexão: </td>
-							<td><input type="text" id="campoConexao" name="campoConexao" required /></td>
+							<td><input type="text" id="campoConexao" name="campoConexao"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Câmera: </td>
-							<td><input type="text" id="campoCamera" name="campoCamera" required /></td>
+							<td><input type="text" id="campoCamera" name="campoCamera"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Memória Interna: </td>
-							<td><input type="text" id="campoMemoriaInterna" name="campoMemoriaInterna" required />GB</td>
+							<td><input type="text" id="campoMemoriaInterna" name="campoMemoriaInterna"/>GB</td>
 						</tr>
 						
 						<tr>			
@@ -106,7 +107,7 @@
 
 						<tr>
 							<td align="right">Preço(R$): </td>
-							<td><input type="text" id="campoPreco" name="campoPreco" required  /></td>
+							<td><input type="text" id="campoPreco" name="campoPreco"/></td>
 						</tr>
 
 						<tr>
@@ -115,8 +116,8 @@
 
 						<tr>
 							<td>
-								<input type="submit" style="height:70px;" value="SALVAR" />
-								<input type="button" style="height:70px;" value="ALTERAR" />
+								<input type="submit" style="height:70px;" value="SALVAR"  onclick="CampoEmBrancoProduto();"/>
+								<input type="button" style="height:70px;" value="ALTERAR"  onclick="CampoEmBrancoProduto();"/>
 								<input type="button" style="height:70px;" value="EXCLUIR" />
 							</td>
 						</tr>
