@@ -1,7 +1,9 @@
 function mascaraValidacaoDasSenhas(validacaoDasSenhas){
-								   if (senha.value!=repetirsenha.value) {
-								   alert("A senha e a confirmação de senha terão que ser iguais.");
-								   senha.focus();
-								   return false;
-								   }
-							  }
+	senha1 = document.f1.senha1.value;
+	senha2 = document.f1.senha2.value;
+ 
+	if (senha1 == senha2)
+		alert("SENHAS IGUAIS");
+	else
+		alert("SENHAS DIFERENTES");
+}
