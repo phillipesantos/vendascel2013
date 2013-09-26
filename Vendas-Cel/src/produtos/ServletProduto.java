@@ -21,6 +21,8 @@ public class ServletProduto extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		
 		}
 
 
@@ -50,9 +52,8 @@ public class ServletProduto extends HttpServlet {
 				
 				//Lança as informações obtidas em um HTML
 				
-				String url = "respostaDoServlet.jsp?campoNome="+ produto.getNome();
+				String url = "JSP/respostaDoServlet.jsp?campoNome="+ produto.getNome();
 				response.sendRedirect(url);
-				
 				
 				/*response.getWriter().println("<html>");
 				response.getWriter().println("<head>");
