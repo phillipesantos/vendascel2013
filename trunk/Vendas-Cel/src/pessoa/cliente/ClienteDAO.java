@@ -10,13 +10,13 @@ private static Collection<Cliente> meusClientes = new LinkedList<Cliente>();
 	
 	
 
-	@Override
+	
 	public void addCliente(Cliente cliente) {
 	meusClientes.add(cliente);
 		
 	}
 
-	@Override
+	
 	public boolean isExisteCliente(String nomeCliente) {
 		boolean existe = false;
 		for (Cliente cliente : meusClientes) {
@@ -27,7 +27,7 @@ private static Collection<Cliente> meusClientes = new LinkedList<Cliente>();
 		return existe;
 	}
 
-	@Override
+	
 	public Cliente consultaProduto(String nomeCliente) {
 		Cliente clienteEncontrado = null;
 		for (Cliente cliente : meusClientes) {
