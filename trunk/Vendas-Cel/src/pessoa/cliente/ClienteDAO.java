@@ -11,7 +11,7 @@ private static Collection<Cliente> meusClientes = new LinkedList<Cliente>();
 	
 
 	
-	public void addCliente(Cliente cliente) {
+	public  void addCliente(Cliente cliente) {
 	meusClientes.add(cliente);
 		
 	}
