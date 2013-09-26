@@ -10,6 +10,7 @@ public class Pessoa {
 	private String cpf;
 	private String identidade;
 	private String telefone;
+	
 	public String getNome() {
 		return nome;
 	}
