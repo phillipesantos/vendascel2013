@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import pessoa.Endereco;
 import produtos.Produto;
 import produtos.ProdutoController;
 
@@ -44,12 +45,18 @@ public class ServletCliente extends HttpServlet {
 				cliente.setConfirmarsenha(request.getParameter("confirmarsenha"));
 				
 						
-				        CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
+				     clienteController.CadastrarCliente(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
 						cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),
 						cliente.getConfirmarsenha());
-				 
+	
 				Endereco endereco = new Endereco();
 			        
-			        
-		          endereco.setBairro(request.getParameter("nome"));
+				  endereco.setLogradouro(request.getParameter("Logradouro"));  
+		          endereco.setComplemento(request.getParameter("complemento"));
+		          endereco.setNumero(request.getParameter("numero"));
+		          endereco.setBairro(request.getParameter("Bairro"));
+		          endereco.setCidade(request.getParameter("cidade"));
+		          endereco.setUf(request.getParameter("uf"));
+		          endereco.setCep(request.getParameter("cep"));
+	}
 }
