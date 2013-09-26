@@ -2,7 +2,7 @@ package produtos;
 
 public class ProdutoController {
 
-	public void CadastrarProdutos(String nome, String fabricante, String sistemaOperacional,
+	public void CadastrarProdutos(int Id, String nome, String fabricante, String sistemaOperacional,
 			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
 			String camera, String memoriaInterna, int quantidade, double preco){
 		
