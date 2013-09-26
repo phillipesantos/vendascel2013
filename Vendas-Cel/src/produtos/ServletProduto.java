@@ -44,7 +44,7 @@ public class ServletProduto extends HttpServlet {
 				produto.setQuantidade(Integer.parseInt(request.getParameter("campoQuantidade")));
 				produto.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
 						
-				produtoController.CadastrarProdutos(produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),
+				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),
 						produto.getCor(),produto.getTamanho(),produto.getTamanhoTela(),produto.getModelo(),produto.getConexao(),
 						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
 				
