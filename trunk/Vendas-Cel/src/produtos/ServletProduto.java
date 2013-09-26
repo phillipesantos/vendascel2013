@@ -1,4 +1,4 @@
-package produtos;
+ package produtos;
 
 import java.io.IOException;
 
@@ -21,13 +21,14 @@ public class ServletProduto extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	}
+		}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Produto produto = null;
-		ProdutoController produtoController = null;
+		Produto produto = new Produto();
+		ProdutoController produtoController = new ProdutoController();
+
 
 				//Preenche as variaveis com as informações obtidas no HTML
 				produto.setNome(request.getParameter("campoNome"));
@@ -52,6 +53,7 @@ public class ServletProduto extends HttpServlet {
 				String url = "respostaDoServlet.jsp?campoNome="+ produto.getNome();
 				response.sendRedirect(url);
 				
+				
 				/*response.getWriter().println("<html>");
 				response.getWriter().println("<head>");
 				response.getWriter().println("<title> Dados do Produto </title>");
@@ -71,7 +73,6 @@ public class ServletProduto extends HttpServlet {
 				response.getWriter().println("Preço: \n" + produto.getPreco() +"<br>");
 				response.getWriter().println("</body>");
     			response.getWriter().println("</html>");*/
-		
 	}
 
 }
