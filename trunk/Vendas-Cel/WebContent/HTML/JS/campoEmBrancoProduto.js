@@ -1,4 +1,4 @@
-function CampoEmBrancoProduto()
+function campoEmBrancoProduto()
 {
 	if(document.getElementById("campoNome").value == "")
 	{
