@@ -31,12 +31,16 @@ public class VendaServlet extends HttpServlet {
 		
 		venda.setId(id +=1); 
 		cliente.setEmail(request.getParameter("campoEmail"));
-		produto.setNome("campoNome");
+		cliente.setSenha(request.getParameter("campoSenha"));
+		produto.setNome(request.getParameter("campoNome"));
 		venda.setCliente(cliente);
 		venda.setProduto(produto);
 		
 		vendaController.cadastrarVenda(cliente, produto, id);
 		
+		//String url;
+		//url = "respostaDoServlet.jsp";
+		//response.sendRedirect(url);
 		
 		
 	}
