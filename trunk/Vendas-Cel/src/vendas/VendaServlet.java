@@ -39,7 +39,7 @@ public class VendaServlet extends HttpServlet {
 		vendaController.cadastrarVenda(cliente, produto, id);
 		
 		//String url;
-		//url = "respostaDoServlet.jsp";
+		//url = "respostaDoServlet.jsp?campoEmail="+cliente.getEmail()+"&campoSenha="+cliente.getSenha()+"&campoProduto="+produto.getNome();
 		//response.sendRedirect(url);
 		
 		
