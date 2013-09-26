@@ -32,21 +32,24 @@ public class ServletCliente extends HttpServlet {
 		ClienteController clienteController = new ClienteController();
 
 
-				//Preenche as variaveis com as informações obtidas no HTML
+				
 				cliente.setNome(request.getParameter("nome"));
 				cliente.setSobrenome(request.getParameter("sobrenome"));
 				cliente.setDatadenascimento(request.getParameter("datadenascimento"));
-				cliente.setEndereco(request.getParameter("endereco"));
-				cliente.setTamanhoTela(request.getParameter("campoTamanhoTela"));
-				cliente.setModelo(request.getParameter("campoModelo"));
-				cliente.setConexao(request.getParameter("campoConexao"));
-				cliente.setCamera(request.getParameter("campoCamera"));
-				cliente.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
-				cliente.setQuantidade(Integer.parseInt(request.getParameter("campoQuantidade")));
-				cliente.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
+				cliente.setCpf(request.getParameter("cpf"));
+				cliente.setIdentidade(request.getParameter("identidade"));
+				cliente.setTelefone(request.getParameter("telefone"));
+				cliente.setEmail(request.getParameter("email"));
+				cliente.setSenha(request.getParameter("senha1"));
+				cliente.setConfirmarsenha(request.getParameter("confirmarsenha"));
+				
 						
-				clienteController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),
-						produto.getCor(),produto.getTamanho(),produto.getTamanhoTela(),produto.getModelo(),produto.getConexao(),
-						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
-
+				        CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
+						cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),
+						cliente.getConfirmarsenha());
+				 
+				Endereco endereco = new Endereco();
+			        
+			        
+		          endereco.setBairro(request.getParameter("nome"));
 }
