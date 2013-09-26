@@ -1,8 +1,9 @@
-function mascaraSomenteLetras(a){
-     var tecla=(window.event)?event.keyCode:a.which;
-     if((tecla >= 65 && tecla <= 90)||(tecla >= 97 && tecla <= 122)) return true;
-    else{
-    if (tecla != 8) return false;
-    else return true;
-    }
-}
+function mascaraSomenteLetras(e){
+		if (document.all){var evt=event.keyCode;}
+		else{var evt = e.charCode;}
+		var chr = String.fromCharCode(evt);
+//			var re = /[A-Za-z]/; // permite apenas de A-Z e de a-z
+		var re = /[A-Za-z\s-ÃÕÑÁÉÍÓÚÀÜÇãõñáéíóúàçü]/; // permite de A-Z, a-z, espaços,
+		// hífens e caracteres acentuados. Mais caracteres podem ser adicionados a Lista
+		return (re.test(chr) || evt<20); // com evt<20 permitimos <ENTER>,<TAB>,<BACKSPACE>
+		}
