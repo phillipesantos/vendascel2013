@@ -5,7 +5,7 @@ function mascaraDataDeNascimento(campoNascimento){
 	var dia = campoNascimento.value.substring(0,2);
 	var mes = campoNascimento.value.substring(3,5);
 	var ano = campoNascimento.value.substring(6,10);
-	if(mes==4 || mes==6 || mes==9 || mes==11 && dia > 30){
+	if(mes==04 || mes==06 || mes==09 || mes==11 && dia >= 30){
 	alert("Dia incorreto !!! O mês especificado contém no máximo 30 dias.");
 	return false;
 	} else{
