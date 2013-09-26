@@ -168,7 +168,7 @@
 						<tr>
 							<td align="right">Pesquisa de Cliente(CPF):</td>
 							<td>
-								<input type="text" id="cpf" name="cpf" style="height:20px;" />
+								<input type="text" id="cpf" name="cpf" style="height:20px;" maxlength="14" onkeypress="mascaraCpf(this); return somenteNumeros(event);" />
 								<input type="button" id="validarBusca"  name="validarBusca" style="height:30px;" value="Pesquisar" />
 							</td>
 						</tr>
