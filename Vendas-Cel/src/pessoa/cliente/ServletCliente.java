@@ -45,7 +45,7 @@ public class ServletCliente extends HttpServlet {
 				cliente.setConfirmarsenha(request.getParameter("confirmarsenha"));
 				
 						
-				     clienteController.CadastrarCliente(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
+				     clienteController.CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
 						cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),
 						cliente.getConfirmarsenha());
 	

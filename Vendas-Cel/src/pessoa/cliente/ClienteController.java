@@ -9,9 +9,10 @@ public class ClienteController {
 	
 	
 
-		public void CadastrarCliente
-		( String email,String senha,String confirmarsenha,String nome,String sobrenome,String datadenascimento,boolean sexo,
-		 Endereco endereco,String cpf,String identidade,String telefone)
+	public void CadastrarClientes(String nome, String sobrenome,
+			String datadenascimento, String cpf, String identidade,
+			String telefone, String email, String senha,
+			String confirmarsenha) 
 		{
 			
 			Cliente cliente= new Cliente();
@@ -20,8 +21,6 @@ public class ClienteController {
 			cliente.setNome(nome);
 			cliente.setSobrenome(sobrenome);
 			cliente.setDatadenascimento(datadenascimento);
-			cliente.setSexo(sexo);
-			cliente.setEndereco(endereco);
 			cliente.setCpf(cpf);
 			cliente.setIdentidade(identidade);
 			cliente.setTelefone(telefone);
@@ -30,7 +29,12 @@ public class ClienteController {
 			cliente.setConfirmarsenha(confirmarsenha);
 			cliente.salvar();
 		}
-	}
+
+		
+			// TODO Auto-generated method stub
+			
+		}
+	
 	
 
 
