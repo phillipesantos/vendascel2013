@@ -54,7 +54,9 @@ public class ServletCliente extends HttpServlet {
 		clienteController.CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
 		cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),
 		cliente.getConfirmarsenha());
-			
+		
+		String url = "cadastroCliente.html";
+		response.sendRedirect(url);		
 			  
 	}
 }
