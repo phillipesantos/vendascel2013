@@ -11,8 +11,7 @@ public class ClienteController {
 
 	public void CadastrarClientes(String nome, String sobrenome,
 			String datadenascimento, String cpf, String identidade,
-			String telefone, String email, String senha,
-			String confirmarsenha) 
+			String telefone, String email, String senha) 
 		{
 			
 			Cliente cliente= new Cliente();
@@ -26,7 +25,6 @@ public class ClienteController {
 			cliente.setTelefone(telefone);
 			cliente.setEmail(email);
 			cliente.setSenha(senha);
-			cliente.setConfirmarsenha(confirmarsenha);
 			cliente.salvar();
 		}
 

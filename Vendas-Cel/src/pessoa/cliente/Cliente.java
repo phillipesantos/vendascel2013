@@ -6,7 +6,6 @@ public class Cliente extends Pessoa{
 
 	private String email;
 	private String senha;
-	private String confirmarsenha;
 	
 	
 	ClienteDAO clienteDAO = new ClienteDAO();
@@ -31,14 +30,6 @@ public class Cliente extends Pessoa{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getConfirmarsenha() {
-		return confirmarsenha;
-	}
-	public void setConfirmarsenha(String confirmarsenha) {
-		this.confirmarsenha = confirmarsenha;
-	}
-	
-	
 }
 	
 	

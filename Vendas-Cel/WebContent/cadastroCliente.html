@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript" src="JS/somenteNumeros.js"></script>
-<script type="text/javascript" src="JS/mascaraCpf.js"></script>
-<script type="text/javascript" src="JS/mascaraIdentidade.js"></script>
-<script type="text/javascript" src="JS/mascaraTelefone.js"></script>
-<script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
-<script type="text/javascript" src="JS/mascaraCep.js"></script>
-<script type="text/javascript" src="JS/mascaraValidacaoDasSenhas.js"></script>
-<script type="text/javascript" src="JS/mascaraSomenteLetras.js"></script>
 
-<meta charset="ISO-8859-1">
-
-<title>Cadastro</title>
-
-<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
-
-</head>
+	<head>
+		
+		<meta charset="ISO-8859-1">
+		
+		<title>Cadastro de Cliente</title>
+		
+		<style type="text/css">
+									
+			#buscarCliente{
+							background:none;
+							border: 1px solid #0d2c52;
+							background:white;
+						}
+		</style>
+		
+		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
+		
+		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
+		<script type="text/javascript" src="JS/mascaraCpf.js"></script>
+		<script type="text/javascript" src="JS/mascaraIdentidade.js"></script>
+		<script type="text/javascript" src="JS/mascaraTelefone.js"></script>
+		<script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
+		<script type="text/javascript" src="JS/mascaraCep.js"></script>
+		<script type="text/javascript" src="JS/mascaraValidacaoDasSenhas.js"></script>
+		<script type="text/javascript" src="JS/mascaraSomenteLetras.js"></script>
+		
+	</head>
 
 <body>
 
@@ -27,152 +38,150 @@
 	
 			<font face="Verdana, Arial">
 <center>			
-<form>
-<table>
-<tr>
-	<td align="right">Nome:</td>
-	<td><input type="text"  size="50px" maxlength="30" name="nome"></td>
-</tr>
-<tr>
-    <td align="right">Sobrenome:</td>
-	<td><input type="text" size="50px" maxlength="30" name="sobrenome"></td>
-</tr>
-<tr>
-    <td align="right">Data De Nascimento:</td>
-	<td><input type="text" size="20px"  maxlength="10" name="datadenascimento" title="DD/MM/AAAA" onkeypress="mascaraDataDeNascimento(this); return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">Logradouro:</td>
-	<td><input type="text"  size="50px" maxlength="40" name="logradouro" onkeypress="return mascaraSomenteLetras(event);"></td>
-</tr>
-<tr>
-    <td align="right">Numero:</td>
-	<td><input type="text" size="20px" maxlength="8" name="numero" onkeypress="return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">Complemento:</td>
-	<td><input type="text" size="50px" maxlength="40" name="complemento"></td>
-</tr>
-<tr>
-    <td align="right">Bairro:</td>
-	<td><input type="text" size="50px" maxlength="30" name="bairro" onkeypress="return mascaraSomenteLetras(event);"></td>
-</tr>
-<tr>
-    <td align="right">Cidade:</td>
-	<td><input type="text" size="50px" maxlength="30" name="cidade" onkeypress="return mascaraSomenteLetras(event);"></td>
-</tr>
-<tr>
-    <td align="right">Cep:</td>
-	<td><input type="text" size="20px" maxlength="10" name="cep" onkeypress="mascaraCep(this); return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">UF:</td>
-	<td>
-		<select>
-			<option value="0">-- Selecione --</option>
-			<option value="1">AC</option>
-			<option value="2">AL</option>
-			<option value="3">AM</option>
-			<option value="4">AP</option>
-			<option value="5">BA</option>
-			<option value="6">CE</option>
-			<option value="7">DF</option>
-			<option value="8">ES</option>
-			<option value="9">GO</option>
-			<option value="10">MA</option>
-			<option value="11">MT</option>
-			<option value="12">MS</option>
-			<option value="13">MG</option>
-			<option value="14">PA</option>
-			<option value="15">PB</option>
-			<option value="16">PR</option>
-			<option value="17">PE</option>
-			<option value="18">PI</option>
-			<option value="19">RJ</option>
-			<option value="20">RN</option>
-			<option value="21">RS</option>
-			<option value="22">RO</option>
-			<option value="23">RR</option>
-			<option value="24">SC</option>
-			<option value="25">SP</option>
-			<option value="26">SE</option>
-			<option value="27">TO</option>		
-		</select>
-	</td>
-</tr>
-<tr>
-    <td align="right">CPF:</td>
-	<td><input type="text" size="30px" maxlength="14" name="cpf" onkeypress="mascaraCpf(this); return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">Identidade:</td>
-	<td><input type="text" size="30px" maxlength="9" name="identidade" onkeypress="mascaraIdentidade(this); return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">Telefone:</td>
-	<td><input type="text" size="30px" maxlength="13" name="telefone" onkeypress="mascaraTelefone(this); return somenteNumeros(event);"></td>
-</tr>
-<tr>
-    <td align="right">Email:</td>
-	<td><input type="text" size="50px" maxlength="30" name="email"></td>
-</tr>
-<tr>
-    <td align="right">Senha:</td>
-	<td><input type="password" size="30px" maxlength="20" name="senha1" onkeypress="mascaraValidacaoDasSenhas(event);"></td>
-</tr>
-<tr>
-    <td align="right">Repetir Senha:</td>
-	<td><input type="password" size="30px" maxlength="20" name="senha2" onkeypress="mascaraValidacaoDasSenhas(event);"></td>
-</tr>
-
-<tr>
-	<td align="right">Sexo:</td>
-	<td><input type="radio" size="100px" name="sexo" checked="checked" value="2">Masculino
-	<input type="radio" size="100px" name="sexo" value="1">Feminino</td>
-</tr>
-<tr>
-    <td align="right">
-		<input type="submit" style="height:20px;" value="SALVAR" />
-		<input type="button" style="height:20px;" value="ALTERAR" />
-		<input type="button" style="height:20px;" value="EXCLUIR" />
-	</td>
-  	
-</tr>
-
-</table>
-</form>
-
-    
-
-
-
- <style type="text/css">
-									
-			#validarBusca{
-							background:none;
-							border: 1px solid #0d2c52;
-							background:white;
-						}
-		</style>
+	<form id="form1" action="ServletCliente" method="post">
+		<table>
 		
-		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
-	</head>
-	
-	
+			<tr>
+				<td align="right">Nome:</td>
+				<td><input type="text"  size="50px" maxlength="30" name="campoNome"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Sobrenome:</td>
+				<td><input type="text" size="50px" maxlength="30" name="campoSobrenome"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Data De Nascimento:</td>
+				<td><input type="text" size="20px"  maxlength="10" name="campoDataNascimento" title="DD/MM/AAAA" onkeypress="mascaraDataDeNascimento(this); return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Logradouro:</td>
+				<td><input type="text"  size="50px" maxlength="40" name="campoLogradouro" onkeypress="return mascaraSomenteLetras(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Numero:</td>
+				<td><input type="text" size="20px" maxlength="8" name="campoNumero" onkeypress="return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Complemento:</td>
+				<td><input type="text" size="50px" maxlength="40" name="campoComplemento"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Bairro:</td>
+				<td><input type="text" size="50px" maxlength="30" name="campoBairro" onkeypress="return mascaraSomenteLetras(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Cidade:</td>
+				<td><input type="text" size="50px" maxlength="30" name="campoCidade" onkeypress="return mascaraSomenteLetras(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Cep:</td>
+				<td><input type="text" size="20px" maxlength="10" name="campoCep" onkeypress="mascaraCep(this); return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">UF:</td>
+				<td>
+					<select>
+						<option value="0">-- Selecione --</option>
+						<option value="1">AC</option>
+						<option value="2">AL</option>
+						<option value="3">AM</option>
+						<option value="4">AP</option>
+						<option value="5">BA</option>
+						<option value="6">CE</option>
+						<option value="7">DF</option>
+						<option value="8">ES</option>
+						<option value="9">GO</option>
+						<option value="10">MA</option>
+						<option value="11">MT</option>
+						<option value="12">MS</option>
+						<option value="13">MG</option>
+						<option value="14">PA</option>
+						<option value="15">PB</option>
+						<option value="16">PR</option>
+						<option value="17">PE</option>
+						<option value="18">PI</option>
+						<option value="19">RJ</option>
+						<option value="20">RN</option>
+						<option value="21">RS</option>
+						<option value="22">RO</option>
+						<option value="23">RR</option>
+						<option value="24">SC</option>
+						<option value="25">SP</option>
+						<option value="26">SE</option>
+						<option value="27">TO</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+			    <td align="right">CPF:</td>
+				<td><input type="text" size="30px" maxlength="14" name="campoCpf" onkeypress="mascaraCpf(this); return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Identidade:</td>
+				<td><input type="text" size="30px" maxlength="9" name="campoIdentidade" onkeypress="mascaraIdentidade(this); return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Telefone:</td>
+				<td><input type="text" size="30px" maxlength="13" name="campoTelefone" onkeypress="mascaraTelefone(this); return somenteNumeros(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Email:</td>
+				<td><input type="text" size="50px" maxlength="30" name="campoEmail"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Senha:</td>
+				<td><input type="password" size="30px" maxlength="20" name="campoSenha1" onkeypress="mascaraValidacaoDasSenhas(event);"></td>
+			</tr>
+			
+			<tr>
+			    <td align="right">Repetir Senha:</td>
+				<td><input type="password" size="30px" maxlength="20" name="campoSenha2" onkeypress="mascaraValidacaoDasSenhas(event);"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Sexo:</td>
+				<td><input type="radio" size="100px" name="sexo" checked="checked" value="2">Masculino
+				<input type="radio" size="100px" name="sexo" value="1">Feminino</td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+			    <td align="right">
+					<input type="submit" style="height:40px;" size="60px" value="SALVAR" />
+				</td>
+			</tr>
 		
-			<center>
+		</table>
+	</form>
+	
+<br />
 
-		<form id="form1">
+		<form id="form2">
 
-					<table id="tabela1" border="0" width="616px">
-						<tr>
-							<td align="right">Pesquisa de Cliente(CPF):</td>
-							<td>
-								<input type="text" id="cpf" name="cpf" style="height:20px;" maxlength="14" onkeypress="mascaraCpf(this); return somenteNumeros(event);" />
-								<input type="button" id="BuscarCliente"  name="=BuscarCliente" style="height:25px;" value="Pesquisar" />
-							</td>
-						</tr>
-					</table>
+			<table border="0" width="634px">
+				<tr>
+					<td align="right">Pesquisa de Cliente(CPF):</td>
+					<td>
+						<input type="text" id="campoBuscaCpf" name="campoBuscaCpf" maxlength="14" onkeypress="mascaraCpf(this); return somenteNumeros(event);" />
+						<input type="button" id="buscarCliente"  name="=buscarCliente" style="height:25px;" value="Pesquisar" />
+					</td>
+				</tr>
+			</table>
 
          </form>
 
