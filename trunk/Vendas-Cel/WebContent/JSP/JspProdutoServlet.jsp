@@ -9,11 +9,13 @@
 	</head>
 
 	<body>
-		<center>
-		
+		<font size="5" color="#bfe2e4" face="Verdana, Arial">Resultado da Busca de Produto</font>
+		<hr />
+		<br />
 		<font face="Verdana, Arial">
-		<br><br><br><br><br>
 		
+		<center>
+			
 		<table border="0">
 		
 			<tr>
@@ -64,7 +66,7 @@
 			
 			<tr>
 				<td align="right">Memória Interna:
-				<td><input type="text" value="<%= request.getParameter("campoMemoriaInterna") %>" name="respostaCampoMemoriaInterna">BG</td>
+				<td><input type="text" value="<%= request.getParameter("campoMemoriaInterna") %>" name="respostaCampoMemoriaInterna">GB</td>
 			</tr>
 			
 			<tr>
@@ -86,10 +88,13 @@
 					<input type="button" style="height:40px;" size="60px" value="EXCLUIR" />
 					<a href="../cadastroProduto.html" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
 			</tr>
+			
 		</table>
+		
+		</center>
 		
 		</font>
 		
-		</center>
 	</body>
+	
 </html>
