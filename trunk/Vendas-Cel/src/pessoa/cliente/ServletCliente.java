@@ -23,10 +23,15 @@ public class ServletCliente extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
     	Cliente cliente = new Cliente();
+    	Endereco endereco = new Endereco();
 		ClienteController clienteControler = new ClienteController();
 		cliente = clienteControler.consultaCpfCliente(request.getParameter("campoBuscaCpf"));
 		
-		String url = "JSP/JspClienteServlet.jsp?campoNome="+ cliente.getNome();
+		String url = "JSP/JspClienteServlet.jsp?campoNome="+ cliente.getNome()+"&campoSobrenome="+cliente.getSobrenome()
+				+"&campoDataNascimento="+cliente.getDatadenascimento()+"&campoCpf="+cliente.getCpf()+"&campoRg="+cliente.getRg()
+				+"&campoTelefone="+cliente.getTelefone()+"&campoEmail="+cliente.getEmail()+"&campoSenha1="+cliente.getSenha()
+				+"&campoLogradouro="+endereco.getLogradouro()+"&campoNumero="+endereco.getNumero()+"&campoComplemento="+endereco.getComplemento()
+				+"&campoBairro="+endereco.getBairro()+"&campoCidade="+endereco.getCidade()+"&campoCidade="+endereco.getCep();
 		response.sendRedirect(url);
     	
 		}
