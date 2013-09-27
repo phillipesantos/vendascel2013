@@ -10,8 +10,8 @@ public class ClienteController {
 	
 
 	public void CadastrarClientes(String nome, String sobrenome,
-			String datadenascimento, String cpf, String identidade,
-			String telefone, String email, String senha) 
+			String datadenascimento, String cpf, String rg,
+			String telefone, String email, String senha, Endereco endereco) 
 		{
 			
 			Cliente cliente= new Cliente();
@@ -21,15 +21,14 @@ public class ClienteController {
 			cliente.setSobrenome(sobrenome);
 			cliente.setDatadenascimento(datadenascimento);
 			cliente.setCpf(cpf);
-			cliente.setIdentidade(identidade);
+			cliente.setRg(rg);
 			cliente.setTelefone(telefone);
 			cliente.setEmail(email);
 			cliente.setSenha(senha);
+			cliente.setEndereco(endereco);
 			cliente.salvar();
 		}
 
-		
-			// TODO Auto-generated method stub
 			
 		}
 	
