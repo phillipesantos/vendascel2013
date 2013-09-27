@@ -25,8 +25,7 @@ public class ProdutoController {
 	}
 	
 	public Produto pesquisaProduto(String nomeProduto){
-	
-		
+			
 		ProdutoDAO produtoDAO = new ProdutoDAO();	
 
 		return produtoDAO.consultaProduto(nomeProduto);
