@@ -39,20 +39,19 @@ public class ServletCliente extends HttpServlet {
 				cliente.setSobrenome(request.getParameter("campoSobrenome"));
 				cliente.setDatadenascimento(request.getParameter("campoDataNascimento"));
 				cliente.setCpf(request.getParameter("campoCpf"));
-				cliente.setIdentidade(request.getParameter("campoIdentidade"));
+				cliente.setRg(request.getParameter("campoRg"));
 				cliente.setTelefone(request.getParameter("campoTelefone"));
 				cliente.setEmail(request.getParameter("campoEmail"));
 				cliente.setSenha(request.getParameter("campoSenha1"));
-				endereco.setLogradouro(request.getParameter("Logradouro"));  
-				endereco.setComplemento(request.getParameter("complemento"));
-				endereco.setNumero(request.getParameter("numero"));
-				endereco.setBairro(request.getParameter("Bairro"));
-				endereco.setCidade(request.getParameter("cidade"));
-				endereco.setUf(request.getParameter("uf"));
-				endereco.setCep(request.getParameter("cep"));
+				endereco.setLogradouro(request.getParameter("campoLogradouro"));
+				endereco.setNumero(request.getParameter("campoNumero"));
+				endereco.setComplemento(request.getParameter("campoComplemento"));				
+				endereco.setBairro(request.getParameter("campoBairro"));
+				endereco.setCidade(request.getParameter("campoCidade"));
+				endereco.setCep(request.getParameter("campoCep"));
 						
 		clienteController.CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
-		cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha());
+		cliente.getCpf(),cliente.getRg(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),cliente.getEndereco());
 		
 		String url = "cadastroCliente.html";
 		response.sendRedirect(url);		
