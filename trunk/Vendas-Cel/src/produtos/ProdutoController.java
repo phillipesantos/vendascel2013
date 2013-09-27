@@ -23,4 +23,12 @@ public class ProdutoController {
 		produto.setPreco(preco);
 		produto.salvar();
 	}
+	
+	public Produto pesquisaProduto(String nomeProduto){
+	
+		
+		ProdutoDAO produtoDAO = new ProdutoDAO();	
+
+		return produtoDAO.consultaProduto(nomeProduto);
+	}
 }

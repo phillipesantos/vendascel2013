@@ -18,14 +18,22 @@ public class ServletProduto extends HttpServlet {
        
     }
 
-    
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+    	Produto produto = new Produto();
+    	ProdutoController produtoController = new ProdutoController();    	
+    	produto = produtoController.pesquisaProduto(request.getParameter("campoPesquisaP")); 
+    	
+    	String url = "JSP/respostaDoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
+				+"&campoCor="+produto.getCor()+"&campoTamanho="+produto.getTamanho()+"&campoTamanhoTela="+produto.getTamanhoTela()+"&campoModelo="+produto.getModelo()
+				+"&campoConexao="+produto.getConexao()+"&campoCamera="+produto.getCamera()+"&campoMemoriaInterna="+produto.getMemoriaInterna()+"&campoQuantidade="+produto.getQuantidade()
+				+"&campoPreco="+produto.getPreco();
+		response.sendRedirect(url);
 		
-		
-		}
+	} 	
 
-
+    @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();
@@ -49,31 +57,10 @@ public class ServletProduto extends HttpServlet {
 				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),
 						produto.getCor(),produto.getTamanho(),produto.getTamanhoTela(),produto.getModelo(),produto.getConexao(),
 						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
-				
-				//Lança as informações obtidas em um HTML
-				
-				String url = "JSP/respostaDoServlet.jsp?campoNome="+ produto.getNome();
+		
+				String url = "cadastroProduto.html";
 				response.sendRedirect(url);
 				
-				/*response.getWriter().println("<html>");
-				response.getWriter().println("<head>");
-				response.getWriter().println("<title> Dados do Produto </title>");
-				response.getWriter().println("</head>");
-		 		response.getWriter().println("<body>");
-				response.getWriter().println("Nome: \n" + produto.getNome() +"<br>");
-				response.getWriter().println("Fabricante: \n" + produto.getFabricante() +"<br>");
-				response.getWriter().println("Sistema Operacional: \n" + produto.getSistemaOperacional() +"<br>");
-				response.getWriter().println("Cor: \n" + produto.getCor() +"<br>");
-				response.getWriter().println("Tamanho: \n" + produto.getTamanho() +"<br>");
-				response.getWriter().println("Tamanho da Tela: \n" + produto.getTamanhoTela() +"<br>");
-				response.getWriter().println("Modelo: \n" + produto.getModelo() +"<br>");
-				response.getWriter().println("Conexão: \n" + produto.getConexao() +"<br>");
-				response.getWriter().println("Camera: \n" + produto.getCamera() +"<br>");
-				response.getWriter().println("Memória Internet: \n" + produto.getMemoriaInterna() +"<br>");
-				response.getWriter().println("Quantidade: \n" + produto.getQuantidade() +"<br>");
-				response.getWriter().println("Preço: \n" + produto.getPreco() +"<br>");
-				response.getWriter().println("</body>");
-    			response.getWriter().println("</html>");*/
 	}
 
 }

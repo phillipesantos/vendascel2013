@@ -30,14 +30,14 @@
 			<font face="Verdana, Arial">
 			<center>
 
-				<form id="form1">
+				<form id="form1" action="ServletProduto" method="get">
 
 					<table id="tabela1" border="0" width="470px">
 						<tr>
 							<td align="right">Pesquisa de Produdo: </td>
 							<td>
 								<input type="text" id="campoPesquisaP" name="campoPesquisaP" style="height:30px;" />
-								<input type="button" id="validarBusca"  name="validarBusca" style="height:30px;" value="Pesquisar" />
+								<input type="submit" id="validarBusca"  name="validarBusca" style="height:30px;" value="Pesquisar" />
 							</td>
 						</tr>
 					</table>
@@ -46,7 +46,7 @@
 
 				<br />
 
-				<form id="form2" action="ServletProduto" method="Post" onsubmit="campoEmBrancoProduto()">
+				<form id="form2" action="ServletProduto" method="post" onsubmit="campoEmBrancoProduto()">
 
 					<table id="tabela2" border="0">
 
@@ -107,7 +107,7 @@
 
 						<tr>
 							<td align="right">Preço(R$): </td>
-							<td><input type="text" id="campoPreco" name="campoPreco" required/></td>
+							<td><input type="text" id="campoPreco" name="campoPreco" onkeypress="return somenteNumeros(event);" required/></td>
 						</tr>
 
 						<tr>
