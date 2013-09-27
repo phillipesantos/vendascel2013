@@ -29,7 +29,7 @@
 			</tr>
 			
 			<tr>
-				<td align="right">SO:
+				<td align="right">Sistema Operacional:
 				<td><input type="text" value="<%= request.getParameter("campoSO") %>" name="respostaCampoSO"></td>
 			</tr>
 			
@@ -60,8 +60,8 @@
 			</tr>
 			
 			<tr>
-				<td align="right">Camera:
-				<td><input type="text" value="<%= request.getParameter("campoCamera") %>" name="respostaCampoCamera"></td>
+				<td align="right">Câmera:
+				<td><input type="text" value="<%= request.getParameter("campoCamera") %>" name="respostaCampoCamera">px</td>
 			</tr>
 			
 			<tr>
@@ -75,7 +75,7 @@
 			</tr>
 			
 			<tr>
-				<td align="right">Preço:
+				<td align="right">Preço(R$):
 				<td><input type="text" value="<%= request.getParameter("campoPreco") %>" name="respostaCampoPreco"></td>
 			</tr>
 			
