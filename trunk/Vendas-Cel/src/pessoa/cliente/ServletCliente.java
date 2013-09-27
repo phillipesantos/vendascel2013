@@ -12,7 +12,7 @@ import pessoa.Endereco;
 import produtos.Produto;
 import produtos.ProdutoController;
 
-@WebServlet("/ServletProduto")
+@WebServlet("/ServletCliente")
 public class ServletCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -21,28 +21,28 @@ public class ServletCliente extends HttpServlet {
        
     }
 
-    
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		}
 
-
+    @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Cliente cliente = new Cliente();
-		ClienteController clienteController = new ClienteController();
 		Endereco endereco = new Endereco();
+		ClienteController clienteController = new ClienteController();
+		
 
 				
-				cliente.setNome(request.getParameter("nome"));
-				cliente.setSobrenome(request.getParameter("sobrenome"));
-				cliente.setDatadenascimento(request.getParameter("datadenascimento"));
-				cliente.setCpf(request.getParameter("cpf"));
-				cliente.setIdentidade(request.getParameter("identidade"));
-				cliente.setTelefone(request.getParameter("telefone"));
-				cliente.setEmail(request.getParameter("email"));
-				cliente.setSenha(request.getParameter("senha1"));
-				cliente.setConfirmarsenha(request.getParameter("confirmarsenha"));
+				cliente.setNome(request.getParameter("campoNome"));
+				cliente.setSobrenome(request.getParameter("campoSobrenome"));
+				cliente.setDatadenascimento(request.getParameter("campoDataNascimento"));
+				cliente.setCpf(request.getParameter("campoCpf"));
+				cliente.setIdentidade(request.getParameter("campoIdentidade"));
+				cliente.setTelefone(request.getParameter("campoTelefone"));
+				cliente.setEmail(request.getParameter("campoEmail"));
+				cliente.setSenha(request.getParameter("campoSenha1"));
 				endereco.setLogradouro(request.getParameter("Logradouro"));  
 				endereco.setComplemento(request.getParameter("complemento"));
 				endereco.setNumero(request.getParameter("numero"));
@@ -52,8 +52,7 @@ public class ServletCliente extends HttpServlet {
 				endereco.setCep(request.getParameter("cep"));
 						
 		clienteController.CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
-		cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),
-		cliente.getConfirmarsenha());
+		cliente.getCpf(),cliente.getIdentidade(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha());
 		
 		String url = "cadastroCliente.html";
 		response.sendRedirect(url);		
