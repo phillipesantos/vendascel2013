@@ -16,6 +16,7 @@
 		
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
+		<script type="text/javascript" src="JS/passaParaMaiusculo.js"></script>
 		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
 		<script type="text/javascript" src="JS/campoEmBrancoProduto.js"></script>
 		
@@ -92,7 +93,7 @@
 
 						<tr>
 							<td align="right">Câmera: </td>
-							<td><input type="text" id="campoCamera" name="campoCamera" required onkeyup="passaParaMaiusculo(this)"/></td>
+							<td><input type="text" id="campoCamera" name="campoCamera" required onkeyup="passaParaMaiusculo(this)"/>px</td>
 						</tr>
 
 						<tr>
@@ -102,12 +103,12 @@
 						
 						<tr>			
 							<td align="right">Quantidade: </td>
-							<td><input type="text" id="campoQuantidade" name="campoQuantidade" onkeypress="return somenteNumeros(event);" required/></td>
+							<td><input type="text" id="campoQuantidade" name="campoQuantidade" required onkeypress="return somenteNumeros(event);"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Preço(R$): </td>
-							<td><input type="text" id="campoPreco" name="campoPreco" onkeypress="return somenteNumeros(event);" required/></td>
+							<td><input type="text" id="campoPreco" name="campoPreco" required onkeypress="return somenteNumeros(event);"/></td>
 						</tr>
 
 						<tr>
