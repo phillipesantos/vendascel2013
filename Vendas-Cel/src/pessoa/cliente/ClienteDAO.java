@@ -28,10 +28,10 @@ private static Collection<Cliente> meusClientes = new LinkedList<Cliente>();
 	}
 
 	
-	public Cliente consultaProduto(String nomeCliente) {
+	public Cliente consultaCpfCliente(String cpfCliente) {
 		Cliente clienteEncontrado = null;
 		for (Cliente cliente : meusClientes) {
-			if(cliente.getNome().equals(nomeCliente)){
+			if(cliente.getCpf().equals(cpfCliente)){
 				clienteEncontrado = cliente;
 			}
 		}

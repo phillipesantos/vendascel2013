@@ -3,8 +3,6 @@ package pessoa.cliente;
 import pessoa.Endereco;
 
 
-
-
 public class ClienteController {
 	
 	
@@ -29,8 +27,14 @@ public class ClienteController {
 			cliente.salvar();
 		}
 
+	public Cliente consultaCpfCliente(String cpfCliente){
+		
+		ClienteDAO clienteDAO = new ClienteDAO();	
+
+		return clienteDAO.consultaCpfCliente(cpfCliente);
+	}
 			
-		}
+}
 	
 	
 
