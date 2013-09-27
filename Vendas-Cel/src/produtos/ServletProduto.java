@@ -25,7 +25,7 @@ public class ServletProduto extends HttpServlet {
     	ProdutoController produtoController = new ProdutoController();    	
     	produto = produtoController.pesquisaProduto(request.getParameter("campoPesquisaP")); 
     	
-    	String url = "JSP/respostaDoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
+    	String url = "JSP/JSProdutoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
 				+"&campoCor="+produto.getCor()+"&campoTamanho="+produto.getTamanho()+"&campoTamanhoTela="+produto.getTamanhoTela()+"&campoModelo="+produto.getModelo()
 				+"&campoConexao="+produto.getConexao()+"&campoCamera="+produto.getCamera()+"&campoMemoriaInterna="+produto.getMemoriaInterna()+"&campoQuantidade="+produto.getQuantidade()
 				+"&campoPreco="+produto.getPreco();
