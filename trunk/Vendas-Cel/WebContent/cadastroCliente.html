@@ -130,14 +130,14 @@
 	
 <br />
 
-		<form id="form2">
+		<form id="form2" action="ServletCliente" method="get">
 
 			<table border="0" width="634px">
 				<tr>
 					<td align="right">Pesquisa de Cliente(CPF):</td>
 					<td>
 						<input type="text" id="campoBuscaCpf" name="campoBuscaCpf" maxlength="14" onkeypress="mascaraCpf(this); return somenteNumeros(event);" />
-						<input type="button" id="buscarCliente"  name="=buscarCliente" style="height:25px;" value="Pesquisar" />
+						<input type="submit" id="buscarCliente"  name="=buscarCliente" style="height:25px;" value="Pesquisar" />
 					</td>
 				</tr>
 			</table>

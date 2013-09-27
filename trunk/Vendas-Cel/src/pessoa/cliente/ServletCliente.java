@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import pessoa.Endereco;
-import produtos.Produto;
-import produtos.ProdutoController;
 
 @WebServlet("/ServletCliente")
 public class ServletCliente extends HttpServlet {
@@ -24,8 +22,15 @@ public class ServletCliente extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+    	Cliente cliente = new Cliente();
+		ClienteController clienteControler = new ClienteController();
+		cliente = clienteControler.consultaCpfCliente(request.getParameter("campoBuscaCpf"));
+		
+		String url = "JSP/JspClienteServlet.jsp?campoNome="+ cliente.getNome();
+		response.sendRedirect(url);
+    	
 		}
-
+    
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -33,7 +38,6 @@ public class ServletCliente extends HttpServlet {
 		Endereco endereco = new Endereco();
 		ClienteController clienteController = new ClienteController();
 		
-
 				
 				cliente.setNome(request.getParameter("campoNome"));
 				cliente.setSobrenome(request.getParameter("campoSobrenome"));
@@ -49,6 +53,7 @@ public class ServletCliente extends HttpServlet {
 				endereco.setBairro(request.getParameter("campoBairro"));
 				endereco.setCidade(request.getParameter("campoCidade"));
 				endereco.setCep(request.getParameter("campoCep"));
+				
 						
 		clienteController.CadastrarClientes(cliente.getNome(), cliente.getSobrenome(), cliente.getDatadenascimento(),
 		cliente.getCpf(),cliente.getRg(),cliente.getTelefone(),cliente.getEmail(),cliente.getSenha(),cliente.getEndereco());
