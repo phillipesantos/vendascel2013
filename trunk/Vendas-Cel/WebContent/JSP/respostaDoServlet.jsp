@@ -4,23 +4,85 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Pesquisa de Produto</title>
+<link href="../CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
+<table border="0">
 
-<br>Nome:<%= request.getParameter("campoNome") %><br>
-Fabricante:<%= request.getParameter("campoFabricante") %><br>
-SO:<%= request.getParameter("campoSO") %><br>
-Cor:<%= request.getParameter("campoCor") %><br>
-Tamanho:<%= request.getParameter("campoTamanho") %><br>
-Tamanho da Tela:<%= request.getParameter("campoTamanhoTela") %><br>
-Modelo:<%= request.getParameter("campoModelo") %><br>
-Conexão:<%= request.getParameter("campoConexao") %><br>
-Camera:<%= request.getParameter("campoCamera") %><br>
-Memória Interna:<%= request.getParameter("campoMemoriaInterna") %><br>
-Quantidade:<%= request.getParameter("campoQuantidade") %><br>
-Preço:<%= request.getParameter("campoPreco") %>
+	<tr>
+		<td align="right">Nome:</td>
+		<td><input type="text" value="<%= request.getParameter("campoNome") %>"></td>
+	</tr>
+		
+	<tr>
+		<td align="right">Fabricante:
+		<td><input type="text" value="<%= request.getParameter("campoFabricante") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">SO:
+		<td><input type="text" value="<%= request.getParameter("campoSO") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Cor:
+		<td><input type="text" value="<%= request.getParameter("campoCor") %>"></td>
+	
+	</tr>
+	
+	<tr>
+		<td align="right">Tamanho:
+		<td><input type="text" value="<%= request.getParameter("campoTamanho") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Tamanho da Tela:
+		<td><input type="text" value="<%= request.getParameter("campoTamanhoTela") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Modelo:
+		<td><input type="text" value="<%= request.getParameter("campoModelo") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Conexão:
+		<td><input type="text" value="<%= request.getParameter("campoConexao") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Camera:
+		<td><input type="text" value="<%= request.getParameter("campoCamera") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Memória Interna:
+		<td><input type="text" value="<%= request.getParameter("campoMemoriaInterna") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Quantidade:
+		<td><input type="text" value="<%= request.getParameter("campoQuantidade") %>"></td>
+	</tr>
+	
+	<tr>
+		<td align="right">Preço:
+		<td><input type="text" value="<%= request.getParameter("campoPreco") %>"></td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
