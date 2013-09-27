@@ -9,7 +9,11 @@
 	</head>
 
 	<body>
-	
+		<center>
+		
+		<font face="Verdana, Arial">
+		<br><br><br><br><br>
+		
 		<table border="0">
 		
 			<tr>
@@ -35,7 +39,7 @@
 			
 			<tr>
 				<td align="right">Tamanho:
-				<td><input type="text" value="<%= request.getParameter("campoTamanho") %>" name="respostaCampoTamanho"></td>
+				<td><input type="text" value="<%= request.getParameter("campoTamanho") %>" name="respostaCampoTamanho">mm</td>
 			</tr>
 			
 			<tr>
@@ -60,7 +64,7 @@
 			
 			<tr>
 				<td align="right">Memória Interna:
-				<td><input type="text" value="<%= request.getParameter("campoMemoriaInterna") %>" name="respostaCampoMemoriaInterna"></td>
+				<td><input type="text" value="<%= request.getParameter("campoMemoriaInterna") %>" name="respostaCampoMemoriaInterna">BG</td>
 			</tr>
 			
 			<tr>
@@ -72,8 +76,20 @@
 				<td align="right">Preço:
 				<td><input type="text" value="<%= request.getParameter("campoPreco") %>" name="respostaCampoPreco"></td>
 			</tr>
-		
+			
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
+					<input type="button" style="height:40px;" size="60px" value="EXCLUIR" />
+					<a href="../cadastroProduto.html" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
+			</tr>
 		</table>
-	
+		
+		</font>
+		
+		</center>
 	</body>
 </html>
