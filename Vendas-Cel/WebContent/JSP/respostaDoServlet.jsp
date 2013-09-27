@@ -7,8 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<%= request.getParameter("campoNome") %>
+<br>Nome:<%= request.getParameter("campoNome") %><br>
+Fabricante:<%= request.getParameter("campoFabricante") %><br>
+SO:<%= request.getParameter("campoSO") %><br>
+Cor:<%= request.getParameter("campoCor") %><br>
+Tamanho:<%= request.getParameter("campoTamanho") %><br>
+Tamanho da Tela:<%= request.getParameter("campoTamanhoTela") %><br>
+Modelo:<%= request.getParameter("campoModelo") %><br>
+Conexão:<%= request.getParameter("campoConexao") %><br>
+Camera:<%= request.getParameter("campoCamera") %><br>
+Memória Interna:<%= request.getParameter("campoMemoriaInterna") %><br>
+Quantidade:<%= request.getParameter("campoQuantidade") %><br>
+Preço:<%= request.getParameter("campoPreco") %><br><br><br>
+<a href="../main.html" target="conteudo">Volta a Página Inicial</a>
 
 
 </body>

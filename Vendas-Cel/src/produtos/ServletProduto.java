@@ -39,7 +39,8 @@ public class ServletProduto extends HttpServlet {
 		Produto produto = new Produto();
 		ProdutoController produtoController = new ProdutoController();
 
-
+				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
+		
 				//Preenche as variaveis com as informações obtidas no HTML
 				produto.setNome(request.getParameter("campoNome"));
 				produto.setFabricante(request.getParameter("campoFabricante"));
