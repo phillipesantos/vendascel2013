@@ -19,13 +19,16 @@
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
 		<script type="text/javascript" src="JS/somenteNumeros.js"></script>
+		<script type="text/javascript" src="JS/somenteLetras.js"></script>
 		<script type="text/javascript" src="JS/mascaraCpf.js"></script>
 		<script type="text/javascript" src="JS/mascaraIdentidade.js"></script>
 		<script type="text/javascript" src="JS/mascaraTelefone.js"></script>
 		<script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
 		<script type="text/javascript" src="JS/mascaraCep.js"></script>
 		<script type="text/javascript" src="JS/validacaoDasSenhas.js"></script>
-		<script type="text/javascript" src="JS/mascaraSomenteLetras.js"></script>
+		<script type="text/javascript" src="JS/validacaoDeEmail.js"></script>
+		
+
 		
 	</head>
 
@@ -102,7 +105,7 @@
 			
 			<tr>
 			    <td align="right">Email:*</td>
-				<td><input type="email" size="50px" maxlength="30" name="campoEmail" required></td>
+				<td><input type="email" size="50px" maxlength="30" name="campoEmail" required oninput="validacaoDeEmail(this)"></td>
 			</tr>
 			
 			<tr>

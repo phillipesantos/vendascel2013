@@ -1,6 +1,6 @@
 package produtos;
 
-import produtos.exception.ProdutoInexisteException;
+import produtos.exception.ProdutoInexistenteException;
 
 
 public class ProdutoController {
@@ -41,12 +41,12 @@ public class ProdutoController {
 		return produtoDAO.consultaProduto(nomeProduto);
 	}
 
-	public void excluirContato(String nomeProduto) throws ProdutoInexisteException{
+	public void excluirContato(String nomeProduto) throws ProdutoInexistenteException{
 	
 		if(daoProduto.isExisteProduto(nomeProduto)){
 			daoProduto.excluirProduto(nomeProduto);	
 		} else {
-			throw new ProdutoInexisteException();
+			throw new ProdutoInexistenteException();
 		}
 	}
 	
