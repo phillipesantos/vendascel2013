@@ -1,6 +1,16 @@
 package produtos;
 
+import produtos.exception.ProdutoInexisteException;
+
+
 public class ProdutoController {
+	
+	
+	private IProdutosDAO daoProduto;
+	
+	public ProdutoController(){
+		daoProduto = new ProdutoDAO();
+	}
 
 	public void CadastrarProdutos(int Id, String nome, String fabricante, String sistemaOperacional,
 			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
@@ -30,4 +40,21 @@ public class ProdutoController {
 
 		return produtoDAO.consultaProduto(nomeProduto);
 	}
+
+	public void excluirContato(String nomeProduto) throws ProdutoInexisteException{
+	
+		if(daoProduto.isExisteProduto(nomeProduto)){
+			daoProduto.excluirProduto(nomeProduto);	
+		} else {
+			throw new ProdutoInexisteException();
+		}
+	}
+	
+	public void alterarProduto(String nomeAntigo, Produto produto){
+				
+		daoProduto.alterarProduto(nomeAntigo, produto);
+	}
+	
+
+
 }

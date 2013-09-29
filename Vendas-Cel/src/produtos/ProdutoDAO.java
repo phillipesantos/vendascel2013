@@ -61,9 +61,9 @@ private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
 	}
 
 	@Override
-	public void excluirProduto(String nome) {
+	public void excluirProduto(String nomeProduto) {
 		for (Produto produto : meusProdutos) {
-			if(produto.getNome().toUpperCase().equals(nome.toUpperCase())){
+			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
 				meusProdutos.remove(produto);
 				break;
 			}
