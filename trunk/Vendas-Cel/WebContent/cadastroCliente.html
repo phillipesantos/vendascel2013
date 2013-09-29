@@ -25,9 +25,7 @@
 		<script type="text/javascript" src="JS/mascaraTelefone.js"></script>
 		<script type="text/javascript" src="JS/mascaraDataDeNascimento.js"></script>
 		<script type="text/javascript" src="JS/mascaraCep.js"></script>
-		<script type="text/javascript" src="JS/validacaoDasSenhas.js"></script>
-		<script type="text/javascript" src="JS/validacaoDeEmail.js"></script>
-		
+		<script type="text/javascript" src="JS/validacaoDasSenhas.js"></script>	
 
 		
 	</head>
@@ -75,7 +73,7 @@
 			</tr>
 			<tr>
 			    <td align="right">Logradouro:</td>
-				<td><input type="text"  size="50px" maxlength="40" name="campoLogradouro" onkeypress="return mascaraSomenteLetras(event);"></td>
+				<td><input type="text"  size="50px" maxlength="40" name="campoLogradouro" onkeypress="return somenteLetras(event);"></td>
 			</tr>
 			
 			<tr>
@@ -90,12 +88,12 @@
 			
 			<tr>
 			    <td align="right">Bairro:</td>
-				<td><input type="text" size="50px" maxlength="30" name="campoBairro" onkeypress="return mascaraSomenteLetras(event);"></td>
+				<td><input type="text" size="50px" maxlength="30" name="campoBairro" onkeypress="return somenteLetras(event);"></td>
 			</tr>
 			
 			<tr>
 			    <td align="right">Cidade:</td>
-				<td><input type="text" size="50px" maxlength="30" name="campoCidade" onkeypress="return mascaraSomenteLetras(event);"></td>
+				<td><input type="text" size="50px" maxlength="30" name="campoCidade" onkeypress="return somenteLetras(event);"></td>
 			</tr>
 			
 			<tr>
@@ -105,7 +103,7 @@
 			
 			<tr>
 			    <td align="right">Email:*</td>
-				<td><input type="email" size="50px" maxlength="30" name="campoEmail" required oninput="validacaoDeEmail(this)"></td>
+				<td><input type="email" size="50px" maxlength="30" name="campoEmail" required></td>
 			</tr>
 			
 			<tr>
