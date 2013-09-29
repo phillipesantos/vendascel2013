@@ -88,7 +88,12 @@
 					</tr>
 	
 					<tr>
-						<td><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
+						<td><br></td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td align="right"><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
 						<input type="button" style="height:40px;" size="60px" value="EXCLUIR" />
 						<a href="../cadastroCliente.html" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
 					</tr>
