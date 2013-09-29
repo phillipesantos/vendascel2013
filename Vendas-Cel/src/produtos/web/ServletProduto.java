@@ -1,4 +1,4 @@
- package produtos;
+ package produtos.web;
 
 import java.io.IOException;
 
@@ -7,6 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import produtos.Produto;
+import produtos.ProdutoController;
 
 
 @WebServlet("/ServletProduto")
