@@ -17,6 +17,11 @@ public class Produto {
 	private int quantidade=0;
 	private double preco=0;
 	
+private IProdutosDAO daoProduto = null;
+	
+	public Produto(){
+		daoProduto = new ProdutoDAO();
+	}
 	
 private IProdutosDAO produtosDAO = new ProdutoDAO();
 	
