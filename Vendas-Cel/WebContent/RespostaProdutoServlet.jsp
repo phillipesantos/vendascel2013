@@ -86,7 +86,7 @@
 				<td></td>
 				<td align="right"><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
 					<input type="button" style="height:40px;" size="60px" value="EXCLUIR" />
-					<a href="../cadastroProduto.html" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
+					<a href="cadastroProduto.jsp" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
 			</tr>
 			
 		</table>

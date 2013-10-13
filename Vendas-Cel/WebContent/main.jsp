@@ -10,7 +10,7 @@
 	
 		<form>
 
-			<a href="telaInicio.html" target="conteudo"><img src="CSS/IMG/LogoALPOO.png"></a>
+			<a href="telaInicio.jsp" target="conteudo"><img src="CSS/IMG/LogoALPOO.png"></a>
 			
 						<!-- INICIO DA TABELA 1 -->
 
@@ -23,13 +23,13 @@
 						<input type="submit" style="height:30px;" value="Buscar" />
 					</td>
 					<td align="center">
-						<a href="cadastroCliente.html" target="conteudo" class="MenuCima" style="margin-left:45px; margin-right:5px;">Cadastre-se </a> <font color="#00BFFF;">|</font>
+						<a href="cadastroCliente.jsp" target="conteudo" class="MenuCima" style="margin-left:45px; margin-right:5px;">Cadastre-se </a> <font color="#00BFFF;">|</font>
 					</td>
 					<td align="center">
-						<a href="login.html" target="conteudo" class="MenuCima" style="margin:5px;">Entre </a> <font color="#00BFFF;">|</font>
+						<a href="login.jsp" target="conteudo" class="MenuCima" style="margin:5px;">Entre </a> <font color="#00BFFF;">|</font>
 					</td>
 					<td align="center">
-						<a href="contato.html" target="conteudo" class="MenuCima" style="margin:5px;">Contato</a>
+						<a href="contato.jsp" target="conteudo" class="MenuCima" style="margin:5px;">Contato</a>
 					</td>
 				</tr>
 			</table>
@@ -47,10 +47,10 @@
 				
 				<tr>
 					<td> <!-- MENU LATERAL -->
-						<iframe src="menuLateral.html" name="MenuLateral" frameborder="0" width="220px" height="1360px"></iframe>
+						<iframe src="menuLateral.jsp" name="MenuLateral" frameborder="0" width="220px" height="1360px"></iframe>
 					</td>
 					<td> <!-- AREA DE CONTEUDO -->
-						<iframe src="telaInicio.html" name="conteudo" frameborder="0" width="1020px" height="1360px"></iframe>
+						<iframe src="telaInicio.jsp" name="conteudo" frameborder="0" width="1020px" height="1360px"></iframe>
 					</td>
 				</tr>
 			</table>
