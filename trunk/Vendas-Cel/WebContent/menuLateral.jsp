@@ -37,17 +37,17 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="cadastroCliente.html" target="conteudo">CLIENTE</a>
+					<a href="cadastroCliente.jsp" target="conteudo">CLIENTE</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<a href="cadastroProduto.html" target="conteudo">PRODUTO</a>
+					<a href="cadastroProduto.jsp" target="conteudo">PRODUTO</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<a href="venda.html" target="conteudo">VENDAS</a>
+					<a href="venda.jsp" target="conteudo">VENDAS</a>
 				</td>
 			</tr>
 			<tr>

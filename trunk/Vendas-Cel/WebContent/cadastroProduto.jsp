@@ -58,7 +58,7 @@
 
 						<tr>
 							<td align="right">Fabricante: </td>
-							<td><input type="text" id="campoFabricante" mame="campoFabricante" required onkeyup="passaParaMaiusculo(this)"/></td>
+							<td><input type="text" id="campoFabricante" name="campoFabricante" required onkeyup="passaParaMaiusculo(this)"/></td>
 						</tr>
 
 						<tr>
