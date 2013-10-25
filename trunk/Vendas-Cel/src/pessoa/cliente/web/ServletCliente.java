@@ -1,4 +1,4 @@
-package pessoa.cliente;
+package pessoa.cliente.web;
 
 import java.io.IOException;
 
@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import pessoa.Endereco;
+import pessoa.cliente.Cliente;
+import pessoa.cliente.ClienteController;
 
 @WebServlet("/ServletCliente")
 public class ServletCliente extends HttpServlet {
@@ -27,7 +29,7 @@ public class ServletCliente extends HttpServlet {
 		ClienteController clienteControler = new ClienteController();
 		cliente = clienteControler.consultaCpfCliente(request.getParameter("campoBuscaCpf"));
 		
-		String url = "JSP/JspClienteServlet.jsp?campoNome="+ cliente.getNome()+"&campoSobrenome="+cliente.getSobrenome()
+		String url = "RespostaClienteServlet.jsp?campoNome="+ cliente.getNome()+"&campoSobrenome="+cliente.getSobrenome()
 				+"&campoDataNascimento="+cliente.getDatadenascimento()+"&campoCpf="+cliente.getCpf()+"&campoRg="+cliente.getRg()
 				+"&campoTelefone="+cliente.getTelefone()+"&campoEmail="+cliente.getEmail()+"&campoSenha1="+cliente.getSenha()
 				+"&campoLogradouro="+endereco.getLogradouro()+"&campoNumero="+endereco.getNumero()+"&campoComplemento="+endereco.getComplemento()

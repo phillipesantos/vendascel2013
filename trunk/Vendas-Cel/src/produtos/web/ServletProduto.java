@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import produtos.Produto;
 import produtos.ProdutoController;
+
 
 
 @WebServlet("/ServletProduto")
@@ -23,15 +25,16 @@ public class ServletProduto extends HttpServlet {
 
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+    	
     	Produto produto = new Produto();
-    	ProdutoController produtoController = new ProdutoController();    	
+    	ProdutoController produtoController = new ProdutoController();
+    	
     	produto = produtoController.pesquisaProduto(request.getParameter("campoPesquisaP")); 
     	
-    	String url = "JSP/JspProdutoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
+    	String url = "RespostaProdutoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
 				+"&campoCor="+produto.getCor()+"&campoTamanho="+produto.getTamanho()+"&campoTamanhoTela="+produto.getTamanhoTela()+"&campoModelo="+produto.getModelo()
 				+"&campoConexao="+produto.getConexao()+"&campoCamera="+produto.getCamera()+"&campoMemoriaInterna="+produto.getMemoriaInterna()+"&campoQuantidade="+produto.getQuantidade()
-				+"&campoPreco="+produto.getPreco();
+				+"&campoPreco="+produto.getPreco();	
 		response.sendRedirect(url);
 		
 	} 	
@@ -62,7 +65,7 @@ public class ServletProduto extends HttpServlet {
 						produto.getCor(),produto.getTamanho(),produto.getTamanhoTela(),produto.getModelo(),produto.getConexao(),
 						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
 		
-				String url = "cadastroProduto.html";
+				String url = "cadastroProduto.jsp";
 				response.sendRedirect(url);
 				
 	}
