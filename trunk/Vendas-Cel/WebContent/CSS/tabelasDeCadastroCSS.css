@@ -4,7 +4,9 @@ table{
 					border-style:solid;
 					border-width:1px;
 					border-color:#999999;
+					border-radius:25px;
 					padding: 16px;
 					background:#bfe2e4;
 					color:white;
+					
 				}
