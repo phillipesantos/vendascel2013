@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Pesquisa de Produto</title>
-		<link href="../CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
@@ -85,7 +85,6 @@
 			<tr>
 				<td></td>
 				<td align="right"><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
-					<input type="button" style="height:40px;" size="60px" value="EXCLUIR" />
 					<a href="cadastroProduto.jsp" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
 			</tr>
 			
