@@ -18,12 +18,14 @@ public class VendaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
  	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+ 		
+ 		response.sendRedirect("Boleto.jsp");
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Venda venda = new Venda();
+		/*Venda venda = new Venda();
 		Cliente cliente = new Cliente();
 		Produto produto = new Produto();
 		VendaController vendaController = new VendaController();
@@ -36,11 +38,11 @@ public class VendaServlet extends HttpServlet {
 		venda.setCliente(cliente);
 		venda.setProduto(produto);
 		
-		vendaController.cadastrarVenda(cliente, produto, id);
+		vendaController.cadastrarVenda(cliente, produto, id);*/
 		
 		//String url;
 		//url = "respostaDoServlet.jsp?campoEmail="+cliente.getEmail()+"&campoSenha="+cliente.getSenha()+"&campoProduto="+produto.getNome();
-		//response.sendRedirect(url);
+		
 		
 		
 	}
