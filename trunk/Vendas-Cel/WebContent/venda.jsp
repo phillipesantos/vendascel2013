@@ -9,6 +9,8 @@
 <title>Comprar</title>
 </head>
 	<body>
+	
+	
 	<font size="5" color="#bfe2e4" face="Verdana, Arial">Venda</font>
 			<hr />
 			
@@ -16,24 +18,12 @@
 	
 			<font face="Verdana, Arial"> 
 		<center>	
-			<form>
+			<form action="VendaServlet" method="get">
 				<table>
+			
 					<tr>
-						<td>Produto:</td>
-						<td><input type="text" size="25px" id="campoProduto" name="campoProduto" maxlength="20"></td>
-					</tr>
-					<tr>
-						<td>E-mail:</td>
-						<td><input type="text" size="30px"  id="campoEmail" name="campoEmail" maxlength="25"></td>
-					</tr>
-					<tr>
-						<td>Senha:</td>
-						<td><input type="password" size="20px"   id="campoSenha" name="campoSenha" maxlength="15"></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>				
-						<td><input type="submit" size="150px" value="Comprar" onclick="campoEmBrancoVenda()"></td>
+									
+						<td><input type="submit" size="150px" value="Comprar" ></td>
 					</tr>
 					
 				</table>
