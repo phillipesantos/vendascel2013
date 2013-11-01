@@ -31,13 +31,13 @@
 			<font face="Verdana, Arial">
 			<center>
 
-				<form id="form1" action="ServletProduto" method="get">
+				<form id="form1" action="ServletPesquisarIncluirProduto" method="get">
 
 					<table id="tabela1" border="0" width="483px">
 						<tr>
 							<td align="right">Pesquisa de Produdo: </td>
 							<td>
-								<input type="text" id="campoPesquisaP" name="campoPesquisaP" onkeyup="passaParaMaiusculo(this)"/>
+								<input type="text" id="campoPesquisaP" name="campoPesquisaP" onkeyup="passaParaMaiusculo(this)" required/>
 								<input type="submit" id="validarBusca"  name="validarBusca" style="height:25px;" value="Pesquisar" />
 							</td>
 						</tr>
@@ -47,7 +47,7 @@
 
 				<br />
 
-				<form id="form2" action="ServletProduto" method="post" onsubmit="campoEmBrancoProduto()">
+				<form id="form2" action="ServletPesquisarIncluirProduto" method="post" onsubmit="campoEmBrancoProduto()">
 
 					<table id="tabela2" border="0">
 

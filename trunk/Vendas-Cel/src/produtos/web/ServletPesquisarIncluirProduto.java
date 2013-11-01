@@ -14,12 +14,12 @@ import produtos.ProdutoController;
 
 
 
-@WebServlet("/ServletProduto")
-public class ServletProduto extends HttpServlet {
+@WebServlet("/ServletPesquisarIncluirProduto")
+public class ServletPesquisarIncluirProduto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
-    public ServletProduto() {
+    public ServletPesquisarIncluirProduto() {
        
     }
 
