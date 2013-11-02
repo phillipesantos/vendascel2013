@@ -7,15 +7,6 @@
 		
 		<title>Cadastro de Cliente</title>
 		
-		<style type="text/css">
-									
-			#buscarCliente{
-							background:none;
-							border: 1px solid #0d2c52;
-							background:white;
-						}
-		</style>
-		
 		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 		
 		<script type="text/javascript" src="JS/somenteNumeros.js"></script>

@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Boleto de cobrança POO Project </TITLE>
+<TITLE>Boleto de cobrança ALPOO Project </TITLE>
 <META http-equiv=Content-Type content=text/html charset=ISO-8859-1>
 
 <style type=text/css>
@@ -40,7 +40,7 @@ de Impressão</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
     <td width=41><IMG SRC="logoTT.png"></td>
-    <td class=ti width=455>Boleto de cobrança POO Project <br>07.084.735/0001-90<br>
+    <td class=ti width=455>Boleto de cobrança ALPOO Project <br>07.084.735/0001-90<br>
 	<br>
 	Recife / PE<br>
     </td>
@@ -65,7 +65,7 @@ Agência/Código do Cedente</td><td class=ct valign=top width=7 height=13><img hei
 Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>
 Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>
 Nosso número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=298 height=12> 
-  <span class="campo">Poo Project</span></td>
+  <span class="campo">ALPOO Project</span></td>
 <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=126 height=12> 
   <span class="campo">
   
@@ -110,9 +110,9 @@ Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height
 >Demonstrativo</td><td class=ct  width=7 height=12></td><td class=ct  width=88 >
 Autenticação mecânica</td></tr><tr><td  width=7 ></td><td class=cp width=564 >
 <span class="campo">
-  Compra de celular POO Project - Nº de compra: 1629148<br>
+  Compra de celular ALPOO Project - Nº de compra: 1629148<br>
   <br>
- Poo Project - http://www.pooproject.com.br<br>
+ ALPOO Project - http://www.alpooproject.com.br<br>
   </span>
   </td><td  width=7 ></td><td  width=88 ></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td width=7></td><td  width=500 class=cp> 
 <br><br><br> 
