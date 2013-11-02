@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+.BotoesBoleto{
+	position:absolute;
+	top:900px;
+	left:270px; 
+}
+button{
+	border-radius:8px;
+}

@@ -1,0 +1,4 @@
+function imprimirBoleto()
+   {
+   window.print()
+   }
