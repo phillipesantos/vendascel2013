@@ -13,6 +13,9 @@
 <!--.ld2 { font: bold 12px Arial; color: #000000 }
 --></style> 
 <!--<script>window.print();</script></i>--->
+
+<link href="CSS/BoletoBotoes.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="JS/imprimirBoleto.js"></script>
 </head>
 
 <BODY text=#000000 bgColor=#ffffff topMargin=0 rightMargin=0>
@@ -232,4 +235,10 @@ Ficha de Compensação</b></div></TD></TR><TR><TD class=ct  colspan=3 ></TD></tr><
  </TD>
 </tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TR><TD class=ct width=666></TD></TR><TBODY><TR><TD class=ct width=666><div align=right>Corte 
 na linha pontilhada</div></TD></TR><TR><TD class=ct width=666><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/6.png width=665 border=0></TD></tr></tbody></table>
+
+	<div class="BotoesBoleto">
+
+				<button onclick="imprimirBoleto();">Imprimir</button> <button>Cofirmar</button>
+	</div>
+
 </BODY></HTML>
