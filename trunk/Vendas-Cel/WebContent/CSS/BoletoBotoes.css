@@ -6,5 +6,8 @@
 	left:270px; 
 }
 button{
-	border-radius:8px;
+	border-radius:25px;
+	background:none;
+	border: 1px solid #0d2c52;
+	background:white;
 }

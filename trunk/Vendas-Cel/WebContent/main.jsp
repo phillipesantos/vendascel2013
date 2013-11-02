@@ -20,7 +20,7 @@
 						<input type="text" style="height:30px;" size="80px" name="barra_busca"  placeholder="O que procura?" />
 					</td>
 					<td valign=bottom align="center">
-						<input type="submit" style="height:30px;" value="Buscar" />
+						<input type="submit" style="height:35px;" value="Buscar" />
 					</td>
 					<td align="center">
 						<a href="cadastroCliente.jsp" target="conteudo" class="MenuCima">Cadastre-se </a> <font color="#00BFFF;">|</font>
