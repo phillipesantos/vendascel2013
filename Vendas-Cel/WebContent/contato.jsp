@@ -4,20 +4,14 @@
 		
 
 		<style type="text/css">
-			table{
-					border-style:solid;
-					border-width:1px;
-					border-color:#999999;
-					padding: 16px;
-					background:#bfe2e4;
-					color:white;
-				}
 			.contatoCSS  {
 							font: italic 13px Verdana, Arial;
 							color: #999999;
 							height:30px
 						}
 		</style>
+		
+		<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<font size="5" color="#bfe2e4" face="Verdana, Arial">Contato</font>
@@ -36,8 +30,8 @@
 				<table border="0">
 					<tr>			
 						<td align="center">
-							<input type="text" class="contatoCSS" size="35px" maxlength="120" required placeholder="Seu Nome"/>
-							<input type="email" class="contatoCSS" size="35px" maxlength="50" required placeholder="Seu Endereço de Email"/>
+							<input type="text" class="contatoCSS" size="36px" maxlength="120" placeholder="Seu Nome"/>
+							<input type="email" class="contatoCSS" size="36px" maxlength="50" required placeholder="Seu Endereço de Email"/>
 						</td>
 					</tr>
 					
