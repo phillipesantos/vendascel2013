@@ -37,7 +37,8 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
     	String url = "RespostaProdutoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
 				+"&campoCor="+produto.getCor()+"&campoTamanho="+produto.getTamanho()+"&campoTamanhoTela="+produto.getTamanhoTela()+"&campoModelo="+produto.getModelo()
 				+"&campoConexao="+produto.getConexao()+"&campoCamera="+produto.getCamera()+"&campoMemoriaInterna="+produto.getMemoriaInterna()+"&campoQuantidade="+produto.getQuantidade()
-				+"&campoPreco="+produto.getPreco();	
+				+"&campoPreco="+produto.getPreco();
+    	
 		response.sendRedirect(url);
     	}
     	
