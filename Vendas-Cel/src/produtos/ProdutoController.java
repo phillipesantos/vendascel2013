@@ -34,11 +34,15 @@ public class ProdutoController {
 		produto.salvar();
 	}
 	
-	public Produto pesquisaProduto(String nomeProduto){
+	public Produto pesquisaProduto(String nomeProduto) throws ProdutoInexistenteException{
 			
 		ProdutoDAO produtoDAO = new ProdutoDAO();
-		return produtoDAO.consultaProduto(nomeProduto);			
 		
+			if(produtoDAO.isExcecao()==false){
+				throw new ProdutoInexistenteException();	
+			}else{
+				return produtoDAO.consultaProduto(nomeProduto);	
+			}
 	}
 	
 	public void excluirContato(String nomeProduto) throws ProdutoInexistenteException{

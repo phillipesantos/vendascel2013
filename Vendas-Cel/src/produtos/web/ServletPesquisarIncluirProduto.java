@@ -1,7 +1,7 @@
  package produtos.web;
 
 import java.io.IOException;
-
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import produtos.Produto;
 import produtos.ProdutoController;
+import produtos.exception.ProdutoInexistenteException;
 
 
 
@@ -28,7 +29,9 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
     	
     	Produto produto = new Produto();
     	ProdutoController produtoController = new ProdutoController();
+    	PrintWriter pw = response.getWriter();
     	
+    	try{
     	produto = produtoController.pesquisaProduto(request.getParameter("campoPesquisaP")); 
     	
     	String url = "RespostaProdutoServlet.jsp?campoNome="+ produto.getNome()+"&campoFabricante="+produto.getFabricante()+"&campoSO="+produto.getSistemaOperacional()
@@ -36,6 +39,11 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				+"&campoConexao="+produto.getConexao()+"&campoCamera="+produto.getCamera()+"&campoMemoriaInterna="+produto.getMemoriaInterna()+"&campoQuantidade="+produto.getQuantidade()
 				+"&campoPreco="+produto.getPreco();	
 		response.sendRedirect(url);
+    	}
+    	
+    	catch(ProdutoInexistenteException e){
+    		pw.append(e.getMessage());
+    	}
 		
 	} 	
 
