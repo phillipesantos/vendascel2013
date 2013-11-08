@@ -1,39 +1,50 @@
 package produtos.web;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ServletAlterarProtuto
- */
+import produtos.Produto;
+import produtos.ProdutoController;
+
+
 @WebServlet("/ServletAlterarProtuto")
 public class ServletAlterarProtuto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public ServletAlterarProtuto() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		Produto produto = new Produto();
+		ProdutoController produtoController = new ProdutoController();
+		
+		produto.setNome(request.getParameter("respostaCampoNome"));
+		produto.setFabricante(request.getParameter("respostaCampoFabricante"));
+		produto.setSistemaOperacional(request.getParameter("respostaCampoSO"));
+		produto.setCor(request.getParameter("respostaCampoCor"));
+		produto.setTamanho(request.getParameter("respostaCampoTamanho"));
+		produto.setTamanhoTela(request.getParameter("respostaCampoTamanhoTela"));
+		produto.setModelo(request.getParameter("respostaCampoModelo"));
+		produto.setConexao(request.getParameter("respostaCampoConexao"));
+		produto.setCamera(request.getParameter("respostaCampoCamera"));
+		produto.setMemoriaInterna(request.getParameter("respostaCampoMemoriaInterna"));
+		produto.setQuantidade(Integer.parseInt(request.getParameter("respostaCampoQuantidade")));
+		produto.setPreco(Double.parseDouble(request.getParameter("respostaCampoPreco")));
 	}
 
 }
