@@ -7,16 +7,6 @@ import java.util.LinkedList;
 
 public class ProdutoDAO implements IProdutosDAO{
 	
-	boolean excecao = false;
-	
-public boolean isExcecao() {
-		return excecao;
-	}
-
-
-	public void setExcecao(boolean excecao) {
-		this.excecao = excecao;
-	}
 
 private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
 	
@@ -43,7 +33,6 @@ private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
 			
 		for (Produto produto : meusProdutos) {
 			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
-				excecao = true;
 				produtoEncontrado = produto;				
 				break;
 			}
