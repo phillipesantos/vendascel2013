@@ -47,7 +47,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 
 				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
-				//Preenche as variaveis com as informações obtidas no HTML
+				//Preenche as variaveis com as informações obtidas no JSP
 				produto.setNome(request.getParameter("campoNome"));
 				produto.setFabricante(request.getParameter("campoFabricante"));
 				produto.setSistemaOperacional(request.getParameter("campoSO"));
