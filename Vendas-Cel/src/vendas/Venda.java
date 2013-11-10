@@ -1,5 +1,7 @@
 package vendas;
 
+import java.util.Date;
+
 import pessoa.cliente.Cliente;
 import produtos.Produto;
 
@@ -7,6 +9,8 @@ public class Venda {
 	
 	private Cliente cliente;
 	private Produto produto;
+	private Date dataDeCompra;
+	private float valorTotalDaCompra;
 	private int id;
 	
 	
