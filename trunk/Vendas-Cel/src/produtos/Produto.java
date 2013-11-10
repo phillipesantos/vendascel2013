@@ -3,7 +3,7 @@ package produtos;
 public class Produto {
 	
 	private int id;
-	private int ponteiro;
+	private int ponteiro;	
 	private String nome;
 	private String fabricante;
 	private String sistemaOperacional;
