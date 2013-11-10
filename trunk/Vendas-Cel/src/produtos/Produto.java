@@ -2,20 +2,20 @@ package produtos;
 
 public class Produto {
 	
-	private int id=0;
-	private int ponteiro=0;
+	private int id;
+	private int ponteiro;
 	private String nome;
 	private String fabricante;
 	private String sistemaOperacional;
 	private String cor;
 	private String tamanho;
 	private String tamanhoTela;
-	private String modelo;
 	private String conexao;
+	private String modelo;
 	private String camera;
 	private String memoriaInterna;
-	private int quantidade=0;
-	private double preco=0;
+	private int quantidade;
+	private double preco;
 	
 private IProdutosDAO daoProduto = null;
 	
