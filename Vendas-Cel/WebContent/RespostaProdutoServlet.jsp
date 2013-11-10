@@ -21,7 +21,7 @@
 		
 		<center>
 		
-		<form id="formAlterarProduto"> <!-- action="ServletAlterarProtuto" method="post" -->	
+		<form id="formAlterarProduto" action="ServletAlterarProtuto" method="post">
 			<table border="0">
 	
 				<tr>
@@ -90,7 +90,7 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td align="right"><input type="button" style="height:40px;" size="60px" value="ALTERAR" />
+					<td align="right"><input type="submit" style="height:40px;" size="60px" value="ALTERAR" />
 						<a href="cadastroProduto.jsp" target="conteudo"><input type="button" style="height:40px;" size="60px" value="CANCELAR" /></a></td>
 				</tr>
 				
