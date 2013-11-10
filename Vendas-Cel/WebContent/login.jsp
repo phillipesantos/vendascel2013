@@ -18,13 +18,13 @@
 				<div id="login-box-name" style="margin-top:20px;">Email:</div>
 				
 				<div id="login-box-field" style="margin-top:20px;">
-					<input type="email" name="campoLog" class="form-login" title="Usuário" value="" size="30" maxlength="50" placeholder="Digite aqui o seu Email"/>
+					<input type="email" name="campoLogEmail" class="form-login" title="Usuário" value="" size="30" maxlength="50" placeholder="Digite aqui o seu Email"/>
 				</div>
 				
 				<div id="login-box-name">Senha:</div>
 				
 				<div id="login-box-field">
-					<input type="password" name="campoLog"  class="form-login" title="Senha" value="" size="30" maxlength="15" placeholder="Digite aqui a sua Senha" />
+					<input type="password" name="campoLogSenha"  class="form-login" title="Senha" value="" size="30" maxlength="15" placeholder="Digite aqui a sua Senha" />
 				</div>
 				
 				<br />
