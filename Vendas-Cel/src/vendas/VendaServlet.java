@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pessoa.Pessoa;
-import pessoa.cliente.Cliente;
 import produtos.Produto;
 
 
@@ -19,32 +17,23 @@ public class VendaServlet extends HttpServlet {
        
  	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
  		
+ 		Produto produto = new Produto();
+ 		VendaController vendaController = new VendaController();	
+ 		Venda venda = new Venda();
+ 		
+ 		vendaController.adicionarNoCarrinho(produto);
+ 		 		
+
+ 		int id = 000;		
+		venda.setId(id +=1); 
+ 		
  		response.sendRedirect("Boleto.jsp");
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		/*Venda venda = new Venda();
-		Cliente cliente = new Cliente();
-		Produto produto = new Produto();
-		VendaController vendaController = new VendaController();
-		int id = 000;
-		
-		venda.setId(id +=1); 
-		cliente.setEmail(request.getParameter("campoEmail"));
-		cliente.setSenha(request.getParameter("campoSenha"));
-		produto.setNome(request.getParameter("campoNome"));
-		venda.setCliente(cliente);
-		venda.setProduto(produto);
-		
-		vendaController.cadastrarVenda(cliente, produto, id);*/
-		
-		//String url;
-		//url = "respostaDoServlet.jsp?campoEmail="+cliente.getEmail()+"&campoSenha="+cliente.getSenha()+"&campoProduto="+produto.getNome();
-		
-		
-		
+			
 	}
 
 }

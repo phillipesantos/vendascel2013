@@ -22,6 +22,7 @@ public class Venda {
 		produto.setQuantidade(produto.getQuantidade() - 1);
 	}
 	
+	
 	public Cliente getCliente() {
 		return cliente;
 	}

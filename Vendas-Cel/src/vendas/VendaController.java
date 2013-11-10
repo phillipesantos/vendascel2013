@@ -15,4 +15,12 @@ public class VendaController {
 		v.salvarVenda();
 	}
 
+	public void adicionarNoCarrinho(Produto produto)
+	{
+		VendaDAO vendaDAO = new VendaDAO();
+		
+		vendaDAO.carrinhoDeCompras(produto);
+		
+	}
+	
 }

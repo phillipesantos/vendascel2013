@@ -6,4 +6,5 @@ public interface IVendaDAO {
 
 	public void addVenda(Venda venda);
 	public void carrinhoDeCompras(Produto produto);
+	public void somaDeCompras(Venda venda);
 }
