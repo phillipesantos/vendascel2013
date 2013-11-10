@@ -25,4 +25,20 @@ public class VendaDAO implements IVendaDAO {
 
 
 	
+	public void somaDeCompras(Venda venda) {
+		
+		for(Produto produto : carrinho)
+		{
+			double somaDeValores = 0;
+			
+		 somaDeValores = somaDeValores + produto.getPreco();
+			
+		 
+		 
+		}
+		
+	}
+
+
+	
 }
