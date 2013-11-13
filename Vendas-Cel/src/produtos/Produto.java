@@ -17,19 +17,6 @@ public class Produto {
 	private int quantidade;
 	private double preco;
 	
-private IProdutosDAO daoProduto = null;
-	
-	public Produto(){
-		daoProduto = new ProdutoDAO();
-	}
-	
-private IProdutosDAO produtosDAO = new ProdutoDAO();
-	
-	public void salvar() {
-		produtosDAO.addProduto(this);
-	}	
-		
-	
 	public int getId() {
 		return id;
 	}
