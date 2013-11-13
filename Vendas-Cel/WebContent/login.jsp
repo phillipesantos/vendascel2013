@@ -5,7 +5,7 @@
 	</head>
 
 	<body>
-		<form action="ServletClienteLogin">
+		<form action="ServletClienteLogin" method="get">
 			<div style="padding: 0 0 0 25%;">
 	
 				<div id="login-box">
@@ -37,7 +37,9 @@
 					<br />
 					<br />
 					
-					<a href="javascript:history.go(-1)"><img src="CSS/IMG/login-btn.png" width="103" height="42" style="margin-left:90px;" /></a>
+					
+					<input type="submit" value="Entrar" size="50px"> 
+					<!--  <a href="Boleto.jsp"><img src="CSS/IMG/login-btn.png" width="103" height="42" style="margin-left:90px;" /></a>-->
 	
 				</div>
 

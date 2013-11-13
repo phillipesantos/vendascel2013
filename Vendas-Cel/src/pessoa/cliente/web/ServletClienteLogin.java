@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import pessoa.cliente.Cliente;
 import pessoa.cliente.ClienteDAO;
@@ -27,10 +28,11 @@ public class ServletClienteLogin extends HttpServlet {
 		
 		clienteDAO.isExisteCliente(cliente.getEmail(),cliente.getSenha());
 	
+		HttpSession sessao = request.getSession();
 		request.getSession().setAttribute("cliente", cliente);
 	
 		
-		//response.sendRedirect("login.jsp");
+		response.sendRedirect("Boleto.jsp");
 		
 	}
 
