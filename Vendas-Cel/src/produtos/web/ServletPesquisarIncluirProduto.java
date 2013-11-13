@@ -16,7 +16,11 @@ import produtos.ProdutoController;
 
 @WebServlet("/ServletPesquisarIncluirProduto")
 public class ServletPesquisarIncluirProduto extends HttpServlet {
+	
+	//Statement stmt = conn.createStatement();
+	//ResultSet rs = stmt.executeQuery("SELECT max(id) FROM produto ");
 
+int ponteiro=0;
  /*
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,12 +50,13 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();
+		ponteiro++;
 		
 				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
 				//Preenche as variaveis com as informações obtidas no JSP
-				produto.setPonteiro( produto.getPonteiro() + 1);
-				produto.setId(produto.getPonteiro());
+			
+				produto.setId(ponteiro);
 				produto.setNome(request.getParameter("campoNome"));
 				produto.setFabricante(request.getParameter("campoFabricante"));
 				produto.setSistemaOperacional(request.getParameter("campoSO"));
