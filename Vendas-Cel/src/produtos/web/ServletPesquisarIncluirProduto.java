@@ -50,6 +50,8 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
 				//Preenche as variaveis com as informações obtidas no JSP
+				produto.setPonteiro( produto.getPonteiro() + 1);
+				produto.setId(produto.getPonteiro());
 				produto.setNome(request.getParameter("campoNome"));
 				produto.setFabricante(request.getParameter("campoFabricante"));
 				produto.setSistemaOperacional(request.getParameter("campoSO"));
@@ -64,7 +66,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				produto.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
 				
 				ProdutoController produtoController = new ProdutoController();
-				String mensagemConfirmacao = "Produto Inserido com Sucesso";
+				String mensagemConfirmacao = "Produto Inserido com Sucesso!";
 				
 				try {
 				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),produto.getCor(),
@@ -74,7 +76,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				} catch (SQLException e) {
 					mensagemConfirmacao = e.getMessage();
 				}
-				String url = "cadastroProduto.jsp";
+				String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
 				response.sendRedirect(url);
 				
 	}

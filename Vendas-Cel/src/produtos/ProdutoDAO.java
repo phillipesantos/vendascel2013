@@ -17,7 +17,7 @@ public class ProdutoDAO implements IProdutosDAO{
 	public void addProduto(Produto produto) throws ClassNotFoundException, SQLException{
 		this.conn = Conexao.getConexao();
 		
-		PreparedStatement pstmt = this.conn.prepareStatement("INSERT INTO produto (id, nome, fabricante, sistemaoperacional, cor, tamanho, tamanhotela, modelo, conexao, camera, memoriainterna, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,); ");
+		PreparedStatement pstmt = this.conn.prepareStatement("INSERT INTO produto (id, nome, fabricante, sistemaoperacional, cor, tamanho, tamanhotela, modelo, conexao, camera, memoriainterna, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ");
 		
 		pstmt.setInt(1, produto.getId());
 		pstmt.setString(2, produto.getNome());

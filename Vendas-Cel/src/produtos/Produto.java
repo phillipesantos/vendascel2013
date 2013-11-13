@@ -17,6 +17,7 @@ public class Produto {
 	private int quantidade;
 	private double preco;
 	
+		
 	public int getId() {
 		return id;
 	}
