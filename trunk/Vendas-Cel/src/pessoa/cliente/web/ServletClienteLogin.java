@@ -26,11 +26,12 @@ public class ServletClienteLogin extends HttpServlet {
 		cliente.setEmail(request.getParameter("campoLogEmail"));
 		cliente.setSenha(request.getParameter("campoLogSenha"));
 		
+		
 		clienteDAO.isExisteCliente(cliente.getEmail(),cliente.getSenha());
 	
 		HttpSession sessao = request.getSession();
 		request.getSession().setAttribute("cliente", cliente);
-	
+			
 		
 		response.sendRedirect("Boleto.jsp");
 		

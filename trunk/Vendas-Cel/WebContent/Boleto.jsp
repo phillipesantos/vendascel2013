@@ -217,7 +217,7 @@ Outros acréscimos Meu penis</td></tr><tr> <td class=cp valign=top width=7 heigh
 Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr></tbody> 
 </table></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td valign=top width=666 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>
 Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
-<!-- Nome do cliente -->  ${campoLogEmail} </span> 
+<!-- Nome do cliente -->  ${cliente.email} </span> 
 </td>
 </tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
 <!-- logradouro cliente --> </span> 
