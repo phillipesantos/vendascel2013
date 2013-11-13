@@ -15,7 +15,7 @@ public class ProdutoController {
 		
 		Produto produto= new Produto();
 		
-		produto.setId( produto.getPonteiro() + 1);
+		produto.setId(Id);
 		produto.setNome(nome);
 		produto.setFabricante(fabricante);
 		produto.setSistemaOperacional(sistemaOperacional);
