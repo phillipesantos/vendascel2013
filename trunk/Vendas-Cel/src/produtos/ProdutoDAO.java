@@ -1,22 +1,43 @@
 	package produtos;
 
-import java.util.Collection;
-import java.util.LinkedList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import conexao.Conexao;
 
 
 
 public class ProdutoDAO implements IProdutosDAO{
 	
 
-private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
+	private Connection conn = null;
 	
 	@Override
-	public void addProduto(Produto produto){
-		meusProdutos.add(produto);
+	public void addProduto(Produto produto) throws ClassNotFoundException, SQLException{
+		this.conn = Conexao.getConexao();
+		
+		PreparedStatement pstmt = this.conn.prepareStatement("INSERT INTO produto (id, nome, fabricante, sistemaoperacional, cor, tamanho, tamanhotela, modelo, conexao, camera, memoriainterna, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,); ");
+		
+		pstmt.setInt(1, produto.getId());
+		pstmt.setString(2, produto.getNome());
+		pstmt.setString(3, produto.getFabricante());
+		pstmt.setString(4, produto.getSistemaOperacional());
+		pstmt.setString(5, produto.getCor());
+		pstmt.setString(6, produto.getTamanho());
+		pstmt.setString(7, produto.getTamanhoTela());
+		pstmt.setString(8, produto.getModelo());
+		pstmt.setString(9, produto.getConexao());
+		pstmt.setString(10, produto.getCamera());
+		pstmt.setString(11, produto.getMemoriaInterna());
+		pstmt.setInt(12, produto.getQuantidade());
+		pstmt.setDouble(13, produto.getPreco());
+
+		pstmt.executeUpdate();
 	}
 
 	
-	public boolean isExisteProduto(String nomeProduto){
+	/*public boolean isExisteProduto(String nomeProduto){
 		boolean existe = false;
 		for (Produto produto : meusProdutos) {
 			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
@@ -71,6 +92,6 @@ private static Collection<Produto> meusProdutos = new LinkedList<Produto>();
 				break;
 			}
 		}
-	}
+	}*/
 	
 }

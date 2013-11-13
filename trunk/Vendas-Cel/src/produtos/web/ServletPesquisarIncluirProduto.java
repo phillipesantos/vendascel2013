@@ -1,7 +1,6 @@
  package produtos.web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import produtos.Produto;
 import produtos.ProdutoController;
-import produtos.exception.ProdutoInexistenteException;
 
 
 
@@ -24,6 +22,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
        
     }
 
+ /*
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
@@ -47,7 +46,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
     	}
 		
 	} 	
-
+*/
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -69,11 +68,10 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
 				produto.setQuantidade(Integer.parseInt(request.getParameter("campoQuantidade")));
 				produto.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
-						
-				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),
-						produto.getCor(),produto.getTamanho(),produto.getTamanhoTela(),produto.getModelo(),produto.getConexao(),
-						produto.getCamera(),produto.getMemoriaInterna(),produto.getQuantidade(),produto.getPreco());
-		
+				
+				
+				//produtoController.CadastrarProdutos(Id, nome, fabricante, sistemaOperacional, cor, tamanho, tamanhoTela, modelo, conexao, camera, memoriaInterna, quantidade, preco);
+	
 				String url = "cadastroProduto.jsp";
 				response.sendRedirect(url);
 				

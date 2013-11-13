@@ -1,20 +1,17 @@
 package produtos;
 
+import java.sql.SQLException;
+
 import produtos.exception.ProdutoInexistenteException;
 
 
 public class ProdutoController {
 	
+	private IProdutosDAO daoProduto = new ProdutoDAO();	
 	
-	private IProdutosDAO daoProduto;
-	
-	public ProdutoController(){
-		daoProduto = new ProdutoDAO();
-	}
-
 	public void CadastrarProdutos(int Id, String nome, String fabricante, String sistemaOperacional,
 			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
-			String camera, String memoriaInterna, int quantidade, double preco){
+			String camera, String memoriaInterna, int quantidade, double preco) throws ClassNotFoundException, SQLException{
 		
 		Produto produto= new Produto();
 		
@@ -31,10 +28,11 @@ public class ProdutoController {
 		produto.setMemoriaInterna(memoriaInterna);
 		produto.setQuantidade(quantidade);
 		produto.setPreco(preco);
-		produto.salvar();
+		
+		daoProduto.addProduto(produto);
 	}
 	
-	public Produto pesquisaProduto(String nomeProduto) throws ProdutoInexistenteException{
+	/*public Produto pesquisaProduto(String nomeProduto) throws ProdutoInexistenteException{
 			
 		Produto produto = null;
 		
@@ -58,7 +56,7 @@ public class ProdutoController {
 	public void alterarProduto(String nomeAntigo, Produto produto){
 				
 		daoProduto.alterarProduto(nomeAntigo, produto);
-	}
+	}*/
 	
 
 

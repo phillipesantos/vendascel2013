@@ -23,7 +23,7 @@
 			<font face="Verdana, Arial">
 			<center>
 
-				<form id="form1" action="ServletPesquisarIncluirProduto" method="get">
+				<form id="form1">
 
 					<table id="tabela1" border="0" width="483px">
 						<tr>
