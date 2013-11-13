@@ -25,6 +25,6 @@ public class ExecutorPoli {
 		  System.out.println(((Funcionario)p2).getCtps());
 		  System.out.println(((Funcionario)p2).getMatricula());
 		  /*------------------------------------------*/
-		 
+		  
 	  }
 }
