@@ -4,9 +4,12 @@
 
 <%@ taglib prefix="b" uri="http://java.sun.com/jsp/jstl/sql" %>
 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <HTML>
 <HEAD>
-<TITLE>Boleto de cobrança POO Project </TITLE>
+<TITLE>Boleto de cobranÃ§a POO Project </TITLE>
 <META http-equiv=Content-Type content=text/html charset=ISO-8859-1>
 
 <style type=text/css>
@@ -22,16 +25,16 @@
 </head>
 
 <BODY text=#000000 bgColor=#ffffff topMargin=0 rightMargin=0>
-<table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top class=cp><DIV ALIGN="CENTER">Instruções 
-de Impressão</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
+<table width=666 cellspacing=0 cellpadding=0 border=0><tr><td valign=top class=cp><DIV ALIGN="CENTER">InstruÃ§Ãµes 
+de ImpressÃ£o</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
 <p>
-<li>Imprima em impressora jato de tinta (ink jet) ou laser em qualidade normal ou alta (Não use modo econômico).<br>
-<li>Utilize folha A4 (210 x 297 mm) ou Carta (216 x 279 mm) e margens mínimas à esquerda e à direita do formulário.<br>
-<li>Corte na linha indicada. Não rasure, risque, fure ou dobre a região onde se encontra o código de barras.<br>
-<li>Caso não apareça o código de barras no final, clique em F5 para atualizar esta tela.
-<li>Caso tenha problemas ao imprimir, copie a seqüencia numérica abaixo e pague no caixa eletrônico ou no internet banking:<br><br>
+<li>Imprima em impressora jato de tinta (ink jet) ou laser em qualidade normal ou alta (NÃ£o use modo econÃ´mico).<br>
+<li>Utilize folha A4 (210 x 297 mm) ou Carta (216 x 279 mm) e margens mÃ­nimas Ã  esquerda e Ã  direita do formulÃ¡rio.<br>
+<li>Corte na linha indicada. NÃ£o rasure, risque, fure ou dobre a regiÃ£o onde se encontra o cÃ³digo de barras.<br>
+<li>Caso nÃ£o apareÃ§a o cÃ³digo de barras no final, clique em F5 para atualizar esta tela.
+<li>Caso tenha problemas ao imprimir, copie a seqÃ¼encia numÃ©rica abaixo e pague no caixa eletrÃ´nico ou no internet banking:<br><br>
 <span class="ld2">
-&nbsp;&nbsp;&nbsp;&nbsp;Linha Digitável: &nbsp;03399.17254 38600.000160 29148.401028 7 58550000001300<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Linha DigitÃ¡vel: &nbsp;03399.17254 38600.000160 29148.401028 7 58550000001300<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Valor: &nbsp;&nbsp;R$ 13,00<br>
 </span>
 </DIV></td></tr></table><br><table cellspacing=0 cellpadding=0 width=666 border=0><TBODY><TR><TD class=ct width=666>
@@ -43,7 +46,7 @@ de Impressão</DIV></TD></TR><TR><TD valign=top class=cp><DIV ALIGN="left">
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
     <td width=41><IMG SRC="logoTT.png"></td>
-    <td class=ti width=455>Boleto de cobrança POO Project <br>07.084.735/0001-90<br>
+    <td class=ti width=455>Boleto de cobranÃ§a POO Project <br>07.084.735/0001-90<br>
 	<br>
 	Recife / PE<br>
     </td>
@@ -64,10 +67,10 @@ width=2 border=0></td><td class=cpt width=58 valign=bottom><div align=center><fo
 </tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody>
 <tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=298 height=13>
 Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=126 height=13>
-Agência/Código do Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>
-Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>
+AgÃªncia/CÃ³digo do Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>
+EspÃ©cie</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>
 Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=120 height=13>
-Nosso número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=298 height=12> 
+Nosso nÃºmero</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=298 height=12> 
   <span class="campo">Poo Project</span></td>
 <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=126 height=12> 
   <span class="campo">
@@ -85,7 +88,7 @@ Nosso número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=
   <span class="campo">
   000001629148-4  </span></td>
 </tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=298 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=298 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=126 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=126 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=34 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=34 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=53 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=53 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=120 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=120 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top colspan=3 height=13>
-Número do documento</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=132 height=13>
+NÃºmero do documento</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=132 height=13>
 CPF/CNPJ</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=134 height=13>
 Vencimento</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Valor 
 documento</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top colspan=3 height=12> 
@@ -99,15 +102,15 @@ documento</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 
   <span class="campo"><!-- Valor do documento -->    </span></td>
 </tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=72 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=72 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=132 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=132 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=134 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=134 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(-) 
 Desconto / Abatimentos</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=112 height=13>(-) 
-Outras deduções</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(+) 
+Outras deduÃ§Ãµes</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(+) 
 Mora / Multa</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>(+) 
-Outros acréscimos</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=) 
+Outros acrÃ©scimos</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=) 
 Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=112 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=113 height=12></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=112 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=112 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=113 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=113 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12> 
   <span class="campo"><!-- Nome do cliente -->   </span></td>
 </tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=659 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=659 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct  width=7 height=12></td><td class=ct  width=564 Demonstrativo></td><td class=ct  width=7 height=12></td><td class=ct  width=88 >
-Autenticação mecânica</td></tr><tr><td  width=7 ></td><td class=cp width=564 >
+AutenticaÃ§Ã£o mecÃ¢nica</td></tr><tr><td  width=7 ></td><td class=cp width=564 >
 <span class="campo">
-  Compra de celular POO Project - Nº de compra: 1629148<br>
+  Compra de celular POO Project - NÂº de compra: 1629148<br>
   <br>
  Poo Project - http://www.pooproject.com.br<br>
   </span>
@@ -136,11 +139,11 @@ Ponto Venda / Ident. cedente</td></tr><tr><td class=cp valign=top width=7 height
 <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=113 height=13>Data 
 do documento</td><td class=ct valign=top width=7 height=13> <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=153 height=13>
 N<u>o</u> documento</td><td class=ct valign=top width=7 height=13> <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=62 height=13>
-Espécie 
+EspÃ©cie 
 doc.</td><td class=ct valign=top width=7 height=13> <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=34 height=13>Aceite</td><td class=ct valign=top width=7 height=13> 
 <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=82 height=13>Data 
 processamento</td><td class=ct valign=top width=7 height=13> <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Nosso 
-número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=113 height=12><div align=left> 
+nÃºmero</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=113 height=12><div align=left> 
   <span class="campo">
   <!-- data do documento-->  </span></div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=153 height=12> 
     <span class="campo">
@@ -148,7 +151,7 @@ número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src
   <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=62 height=12><div align=left><span class="campo">
     DM  </span> 
  </div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=34 height=12><div align=left><span class="campo">
- Não </span> 
+ NÃ£o </span> 
  </div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=82 height=12><div align=left> 
    <span class="campo">
   <!-- data de processamento -->   <fmt:formatDate value="${data}" dateStyle="long"/><br> </span></div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12> 
@@ -162,14 +165,14 @@ número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src
 <img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1> 
 <img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr> 
 <td class=ct valign=top width=7 height=13> <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top COLSPAN="5" height=13> Carteira</td><td class=ct valign=top height=13 width=7>
-<img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>Espécie</td><td class=ct valign=top height=13 width=7> 
+<img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=53 height=13>EspÃ©cie</td><td class=ct valign=top height=13 width=7> 
 <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=123 height=13>Quantidade</td><td class=ct valign=top height=13 width=7> 
 <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=72 height=13> 
 Valor Documento</td><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=) 
 Valor documento</td></tr><tr> <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td valign=top class=cp height=12 COLSPAN="5"><div align=left>
  </div>    
 <div align=left> <span class="campo">
-  COBRANÇA SIMPLES - CSR</span></div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=53><div align=left><span class="campo">
+  COBRANÃ‡A SIMPLES - CSR</span></div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=53><div align=left><span class="campo">
 R$</span> 
  </div></td><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top  width=123><span class="campo">
  0 </span> 
@@ -189,10 +192,10 @@ R$</span>
 </table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td align=right width=10><table cellspacing=0 cellpadding=0 border=0 align=left><tbody> 
 <tr> <td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr> 
 <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr> 
-<td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td valign=top width=468 rowspan=5><font class=ct>Instruções 
+<td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td valign=top width=468 rowspan=5><font class=ct>InstruÃ§Ãµes 
 (Texto de responsabilidade do cedente)</font><br><br><span class=cp> <FONT class=campo>
-- SR. CAIXA, NAO RECEBER APÓS O VENCIMENTO<br>
-- Não aceitar pagamento menor do que o valor. Pagamento através de cheque pagar no Banco de origem do mesmo. Demais formas, sujeitas a compensação.<br>
+- SR. CAIXA, NAO RECEBER APÃ“S O VENCIMENTO<br>
+- NÃ£o aceitar pagamento menor do que o valor. Pagamento atravÃ©s de cheque pagar no Banco de origem do mesmo. Demais formas, sujeitas a compensaÃ§Ã£o.<br>
 <br>
 </FONT><br><br> 
 </span></td>
@@ -201,7 +204,7 @@ Desconto / Abatimentos</td></tr><tr> <td class=cp valign=top width=7 height=12><
 <td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10> 
 <table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td valign=top width=7 height=1> 
 <img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(-) 
-Outras deduções</td></tr><tr><td class=cp valign=top width=7 height=12> <img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10> 
+Outras deduÃ§Ãµes</td></tr><tr><td class=cp valign=top width=7 height=12> <img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10> 
 <table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr><td class=ct valign=top width=7 height=13> 
 <img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188> 
 <table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(+) 
@@ -210,23 +213,23 @@ Mora / Multa</td></tr><tr><td class=cp valign=top width=7 height=12><img height=
 <img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10><table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr> 
 <td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188> 
 <table cellspacing=0 cellpadding=0 border=0><tbody><tr> <td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(+) 
-Outros acréscimos Meu penis</td></tr><tr> <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10><table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=) 
+Outros acrÃ©scimos Meu penis</td></tr><tr> <td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table></td></tr><tr><td align=right width=10><table cellspacing=0 cellpadding=0 border=0 align=left><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td></tr></tbody></table></td><td align=right width=188><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>(=) 
 Valor cobrado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top align=right width=180 height=12></td></tr></tbody> 
 </table></td></tr></tbody></table><table cellspacing=0 cellpadding=0 width=666 border=0><tbody><tr><td valign=top width=666 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=659 height=13>
 Sacado</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
-<!-- Nome do cliente --> </span> 
+<!-- Nome do cliente -->  ${campoLogEmail} </span> 
 </td>
 </tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=cp valign=top width=7 height=12><img height=12 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=659 height=12><span class="campo">
 <!-- logradouro cliente --> </span> 
 </td>
 </tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=cp valign=top width=472 height=13> 
   <span class="campo">
-   <!-- resto do endereço cliente -->   </span></td>
-<td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>Cód. 
+   <!-- resto do endereÃ§o cliente -->   </span></td>
+<td class=ct valign=top width=7 height=13><img height=13 src=https://www.ongameshop.com.br/modulos/santander/imagens/1.png width=1 border=0></td><td class=ct valign=top width=180 height=13>CÃ³d. 
 baixa</td></tr><tr><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=472 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=472 border=0></td><td valign=top width=7 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=7 border=0></td><td valign=top width=180 height=1><img height=1 src=https://www.ongameshop.com.br/modulos/santander/imagens/2.png width=180 border=0></td></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 border=0 width=666><TBODY><TR><TD class=ct  width=7 height=12></TD><TD class=ct  width=409 >Sacador/Avalista</TD><TD class=ct  width=250 >
 <div align=right>
-Autenticação mecânica - <b class=cp>
-Ficha de Compensação</b></div></TD></TR><TR><TD class=ct  colspan=3 ></TD></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TBODY><TR><TD vAlign=bottom align=left height=50><img src=imagens/p.png width=1 height=50 border=0>
+AutenticaÃ§Ã£o mecÃ¢nica - <b class=cp>
+Ficha de CompensaÃ§Ã£o</b></div></TD></TR><TR><TD class=ct  colspan=3 ></TD></tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TBODY><TR><TD vAlign=bottom align=left height=50><img src=imagens/p.png width=1 height=50 border=0>
 <img>
 </TD>
 </tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TR><TD class=ct width=666></TD></TR><TBODY><TR><TD class=ct width=666><div align=right>Corte 
