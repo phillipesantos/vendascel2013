@@ -1,6 +1,7 @@
  package produtos.web;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,12 +16,6 @@ import produtos.ProdutoController;
 
 @WebServlet("/ServletPesquisarIncluirProduto")
 public class ServletPesquisarIncluirProduto extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-
-    public ServletPesquisarIncluirProduto() {
-       
-    }
 
  /*
     @Override
@@ -51,8 +46,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();
-		ProdutoController produtoController = new ProdutoController();
-
+		
 				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
 				//Preenche as variaveis com as informações obtidas no JSP
@@ -69,9 +63,17 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				produto.setQuantidade(Integer.parseInt(request.getParameter("campoQuantidade")));
 				produto.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
 				
+				ProdutoController produtoController = new ProdutoController();
+				String mensagemConfirmacao = "Produto Inserido com Sucesso";
 				
-				//produtoController.CadastrarProdutos(Id, nome, fabricante, sistemaOperacional, cor, tamanho, tamanhoTela, modelo, conexao, camera, memoriaInterna, quantidade, preco);
-	
+				try {
+				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),produto.getCor(),
+						produto.getTamanho(), produto.getTamanhoTela(), produto.getModelo(), produto.getConexao(), produto.getCamera(), produto.getMemoriaInterna(), produto.getQuantidade(), produto.getPreco());
+				} catch (ClassNotFoundException e) {
+					mensagemConfirmacao = e.getMessage();
+				} catch (SQLException e) {
+					mensagemConfirmacao = e.getMessage();
+				}
 				String url = "cadastroProduto.jsp";
 				response.sendRedirect(url);
 				
