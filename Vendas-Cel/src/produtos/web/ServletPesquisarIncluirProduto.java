@@ -1,7 +1,9 @@
  package produtos.web;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,10 +19,7 @@ import produtos.ProdutoController;
 @WebServlet("/ServletPesquisarIncluirProduto")
 public class ServletPesquisarIncluirProduto extends HttpServlet {
 	
-	//Statement stmt = conn.createStatement();
-	//ResultSet rs = stmt.executeQuery("SELECT max(id) FROM produto ");
 
-int ponteiro=0;
  /*
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,13 +49,12 @@ int ponteiro=0;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();
-		ponteiro++;
+		
 		
 				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
 				//Preenche as variaveis com as informações obtidas no JSP
 			
-				produto.setId(ponteiro);
 				produto.setNome(request.getParameter("campoNome"));
 				produto.setFabricante(request.getParameter("campoFabricante"));
 				produto.setSistemaOperacional(request.getParameter("campoSO"));
@@ -74,7 +72,7 @@ int ponteiro=0;
 				String mensagemConfirmacao = "Produto Inserido com Sucesso!";
 				
 				try {
-				produtoController.CadastrarProdutos(produto.getId(), produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),produto.getCor(),
+				produtoController.CadastrarProdutos(produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),produto.getCor(),
 						produto.getTamanho(), produto.getTamanhoTela(), produto.getModelo(), produto.getConexao(), produto.getCamera(), produto.getMemoriaInterna(), produto.getQuantidade(), produto.getPreco());
 				} catch (ClassNotFoundException e) {
 					mensagemConfirmacao = e.getMessage();

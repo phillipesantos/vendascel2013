@@ -2,6 +2,7 @@
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import conexao.Conexao;
@@ -17,23 +18,23 @@ public class ProdutoDAO implements IProdutosDAO{
 	public void addProduto(Produto produto) throws ClassNotFoundException, SQLException{
 		this.conn = Conexao.getConexao();
 		
-		PreparedStatement pstmt = this.conn.prepareStatement("INSERT INTO produto (id, nome, fabricante, sistemaoperacional, cor, tamanho, tamanhotela, modelo, conexao, camera, memoriainterna, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ");
+		PreparedStatement pstmt = this.conn.prepareStatement("INSERT INTO produto (nome, fabricante, sistemaoperacional, cor, tamanho, tamanhotela, modelo, conexao, camera, memoriainterna, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ");
 		
-		pstmt.setInt(1, produto.getId());
-		pstmt.setString(2, produto.getNome());
-		pstmt.setString(3, produto.getFabricante());
-		pstmt.setString(4, produto.getSistemaOperacional());
-		pstmt.setString(5, produto.getCor());
-		pstmt.setString(6, produto.getTamanho());
-		pstmt.setString(7, produto.getTamanhoTela());
-		pstmt.setString(8, produto.getModelo());
-		pstmt.setString(9, produto.getConexao());
-		pstmt.setString(10, produto.getCamera());
-		pstmt.setString(11, produto.getMemoriaInterna());
-		pstmt.setInt(12, produto.getQuantidade());
-		pstmt.setDouble(13, produto.getPreco());
-
+					
+		pstmt.setString(1, produto.getNome());
+		pstmt.setString(2, produto.getFabricante());
+		pstmt.setString(3, produto.getSistemaOperacional());
+		pstmt.setString(4, produto.getCor());
+		pstmt.setString(5, produto.getTamanho());
+		pstmt.setString(6, produto.getTamanhoTela());
+		pstmt.setString(7, produto.getModelo());
+		pstmt.setString(8, produto.getConexao());
+		pstmt.setString(9, produto.getCamera());
+		pstmt.setString(10, produto.getMemoriaInterna());
+		pstmt.setInt(11, produto.getQuantidade());
+		pstmt.setDouble(12, produto.getPreco());
 		pstmt.executeUpdate();
+
 	}
 
 	
