@@ -20,7 +20,8 @@ public class ServletExcluirProduto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		ProdutoController controlador = new ProdutoController();
-				
+		String mensagemConfirmacao = "Produto Excluido com Sucesso!";
+		
 		String nome = request.getParameter("campoExcluirP");
 	
 		try{
@@ -28,6 +29,8 @@ public class ServletExcluirProduto extends HttpServlet {
 		} catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		}
+	
+		String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
+		response.sendRedirect(url);
 	}
-
 }
