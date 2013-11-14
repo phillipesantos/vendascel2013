@@ -7,7 +7,14 @@ import produtos.Produto;
 
 public class Venda {
 	
-	private Cliente cliente;
+	//private Cliente cliente;
+	private int quantidade;
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
 	private Produto produto;
 	private Date dataDeCompra;
 	private int id;
@@ -21,12 +28,7 @@ public class Venda {
 	public void setDataDeCompra(Date dataDeCompra) {
 		this.dataDeCompra = dataDeCompra;
 	}
-	public Cliente getCliente() {
-		return cliente;
-	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
+
 	public Produto getProduto() {
 		return produto;
 	}

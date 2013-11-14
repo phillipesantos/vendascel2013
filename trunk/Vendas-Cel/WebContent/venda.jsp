@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
+<!--  --><link href="CSS/tabelasDeCadastroCSS.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="JS/campoEmBrancoVenda.js"></script>
 
@@ -18,16 +18,20 @@
 	
 			<font face="Verdana, Arial"> 
 		<center>	
-			<form action="VendaServlet" method="get">
+			<form action="VendaServlet" method="get" onsubmit="campoEmBrancoVenda.js">
 				<table>
 								
 					<tr>
 						 <td> Produto:<input type="text" size="40px" name="campoNomeVenda"></td>
 					</tr>
+					<tr>
+					
+						<td>Quantidade:<input type="text" size="10px" name="campoQuantidadeVenda"></td>
+					</tr>
 			
 			
 					<tr>									
-						<td><input type="submit" size="150px" value="Comprar" ></td>
+						<td><input type="submit" size="300px" value="Comprar" ></td>
 					</tr>
 					
 				</table>
