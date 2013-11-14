@@ -27,7 +27,7 @@ public class ServletCliente extends HttpServlet {
     	Cliente cliente = new Cliente();
     	Endereco endereco = new Endereco();
 		ClienteController clienteControler = new ClienteController();
-		cliente = clienteControler.consultaCpfCliente(request.getParameter("campoBuscaCpf"));
+		//cliente = clienteControler.consultaCpfCliente(request.getParameter("campoBuscaCpf"));
 		
 		String url = "RespostaClienteServlet.jsp?campoNome="+ cliente.getNome()+"&campoSobrenome="+cliente.getSobrenome()
 				+"&campoDataNascimento="+cliente.getDatadenascimento()+"&campoCpf="+cliente.getCpf()+"&campoRg="+cliente.getRg()

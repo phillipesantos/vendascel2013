@@ -34,7 +34,7 @@ public void addCliente(Cliente cliente) throws ClassNotFoundException, SQLExcept
 	pstmt2.setString(3, cliente.getSenha());
 
 	
-	PreparedStatement pstmt3 = this.conn.prepareStatement("INSERT INTO cliente (cpf_pessoa,email,senha) VALUES (?, ?, ?); ");
+	PreparedStatement pstmt3 = this.conn.prepareStatement("INSERT INTO endereco (cpf_pessoa,email,senha) VALUES (?, ?, ?); ");
 	
 	pstmt3.setString(2, cliente.getCpf());
 	pstmt3.setString(3,cliente.getEmail());
