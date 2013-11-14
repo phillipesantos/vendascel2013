@@ -114,10 +114,12 @@ public class ProdutoDAO implements IProdutosDAO{
 	
 	@Override
 	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
-		
+		Statement stmt = conn.createStatement();
 		if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
-			PreparedStatement ps = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
-			ps.setString(1, nomeProduto);
+			stmt.executeUpdate("DELETE FROM produto WHERE nome='"+produto.getNome()+"'");
+			
+			//PreparedStatement ps = conn.prepareStatement
+			//ps.setString(1, nomeProduto);
 		}
 
 	}
