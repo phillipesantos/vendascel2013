@@ -2,9 +2,6 @@ package produtos;
 
 import java.sql.SQLException;
 
-import produtos.exception.ProdutoInexistenteException;
-
-
 public class ProdutoController {
 	
 	private IProdutosDAO daoProduto = new ProdutoDAO();	
