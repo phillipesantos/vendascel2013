@@ -1,9 +1,7 @@
  package produtos.web;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import produtos.Produto;
 import produtos.ProdutoController;
+import produtos.exception.ProdutoInexistenteException;
 
 
 
@@ -41,7 +40,6 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
     	catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
     	}
-		
 	} 	
 
     @Override
