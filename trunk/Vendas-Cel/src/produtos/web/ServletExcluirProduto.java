@@ -23,9 +23,10 @@ public class ServletExcluirProduto extends HttpServlet {
 		
 		String nome = request.getParameter("campoExcluirP");
 	
-		try{
-			
+		try{			
 			controlador.excluirProduto(nome);
+			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
+			response.sendRedirect(url);
 			
 		} catch (ProdutoInexistenteException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
@@ -33,7 +34,6 @@ public class ServletExcluirProduto extends HttpServlet {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		}
 		
-		String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
-		response.sendRedirect(url);
+		
 	}
 }

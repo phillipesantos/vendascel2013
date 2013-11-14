@@ -122,7 +122,7 @@
 						<tr>
 							<td align="right">Excuir Produdo: </td>
 							<td>
-								<input type="text" id="campoExcuirP" name="campoExcuirP" placeholder="nome do produto" onkeyup="passaParaMaiusculo(this)" required/>
+								<input type="text" id="campoExcuirP" name="campoExcluirP" placeholder="nome do produto" onkeyup="passaParaMaiusculo(this)" required/>
 								<input type="submit" id="validarExclusao"  name="validarExclusao" style="height:25px;" value="Excluir" />
 							</td>
 						</tr>
