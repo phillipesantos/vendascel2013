@@ -73,15 +73,16 @@ public class ProdutoDAO implements IProdutosDAO{
 	}
 	
 	
-	@Override
-	public void alterarProduto(Produto produtoAlterado) throws ClassNotFoundException, SQLException {
+	public void alterarProduto(String nomeAntigo, Produto produtoAlterado) throws ClassNotFoundException, SQLException {
 		Statement stmt = conn.createStatement(); 
 		
-		stmt.executeUpdate("UPDATE produto SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
-		+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"
-		+ produtoAlterado.getCor() + "', tamanho= '"+ produtoAlterado.getTamanho()+"', tamanhotela= '"+produtoAlterado.getTamanho()+"', modelo ='"
-		+ produtoAlterado.getModelo() + "' conexao='"+ produtoAlterado.getConexao()+ "', camera= '" + produtoAlterado.getCamera() + "', memoriainterna = '"
-		+ produtoAlterado.getMemoriaInterna() + "', quantidade= '" + produtoAlterado.getQuantidade() + "', preco= '" + produtoAlterado.getPreco() + "'  WHERE nome = '" + produtoAlterado.getNome() + "'");
+		if(produtoAlterado.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
+			stmt.executeUpdate("UPDATE produto SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
+			+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"
+			+ produtoAlterado.getCor() + "', tamanho= '"+ produtoAlterado.getTamanho()+"', tamanhotela= '"+produtoAlterado.getTamanho()+"', modelo ='"
+			+ produtoAlterado.getModelo() + "' conexao='"+ produtoAlterado.getConexao()+ "', camera= '" + produtoAlterado.getCamera() + "', memoriainterna = '"
+			+ produtoAlterado.getMemoriaInterna() + "', quantidade= '" + produtoAlterado.getQuantidade() + "', preco= '" + produtoAlterado.getPreco() + "'  WHERE nome = '" + produtoAlterado.getNome() + "'");
+		}
 	}
 	
 	
