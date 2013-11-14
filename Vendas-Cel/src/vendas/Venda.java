@@ -10,19 +10,17 @@ public class Venda {
 	private Cliente cliente;
 	private Produto produto;
 	private Date dataDeCompra;
-	private float valorTotalDaCompra;
 	private int id;
 	
 	
-	VendaDAO vendaDAO;
 	
-	public void salvarVenda()
-	{
-		vendaDAO.addVenda(this);
-		produto.setQuantidade(produto.getQuantidade() - 1);
+	
+	public Date getDataDeCompra() {
+		return dataDeCompra;
 	}
-	
-	
+	public void setDataDeCompra(Date dataDeCompra) {
+		this.dataDeCompra = dataDeCompra;
+	}
 	public Cliente getCliente() {
 		return cliente;
 	}

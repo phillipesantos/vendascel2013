@@ -20,9 +20,13 @@
 		<center>	
 			<form action="VendaServlet" method="get">
 				<table>
-			
+								
 					<tr>
-									
+						 <td> Produto:<input type="text" size="40px" name="campoNomeVenda"></td>
+					</tr>
+			
+			
+					<tr>									
 						<td><input type="submit" size="150px" value="Comprar" ></td>
 					</tr>
 					
