@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import pessoa.cliente.Cliente;
 import produtos.Produto;
 import produtos.ProdutoController;
+import produtos.exception.ProdutoInexistenteException;
 import vendas.Venda;
 import vendas.VendaController;
 
@@ -48,9 +49,11 @@ public class VendaServlet extends HttpServlet {
     	vendaController.cadastrarVenda(produto.getPreco(), data, quantidade, produto.getNome());
     	
     	//response.sendRedirect("Boleto.jsp");
-    	}
     	
-    	catch (ClassNotFoundException | SQLException e) {
+    	}catch (ProdutoInexistenteException e) {
+			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
+    	
+    	}catch (ClassNotFoundException | SQLException e) {
 			//response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
     	}
 		
