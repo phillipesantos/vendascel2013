@@ -19,7 +19,7 @@
 <body>
 	<center>
  	 ${param.msg}<br>
- 	 <a href="cadastroProduto.jsp"><button>Cadastrar Novo Produto</button></a>
+ 	 <a href="cadastroProduto.jsp"><button>Voltar</button></a>
  	</center>
 </body>
 </html>

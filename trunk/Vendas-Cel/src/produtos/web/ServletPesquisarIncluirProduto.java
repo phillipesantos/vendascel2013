@@ -20,14 +20,13 @@ import produtos.ProdutoController;
 public class ServletPesquisarIncluirProduto extends HttpServlet {
 	
 
- /*
+ 
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
     	Produto produto = new Produto();
     	ProdutoController produtoController = new ProdutoController();
-    	PrintWriter pw = response.getWriter();
-    	
+    	    	
     	try{
     	produto = produtoController.pesquisaProduto(request.getParameter("campoPesquisaP")); 
     	
@@ -39,19 +38,17 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 		response.sendRedirect(url);
     	}
     	
-    	catch(ProdutoInexistenteException e){
-    		pw.append(e.getMessage());
+    	catch (ClassNotFoundException | SQLException e) {
+			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
     	}
 		
 	} 	
-*/
+
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produto = new Produto();
 		
-		
-				// CAMINHO: http://localhost:8080/ALPOOproject-VendasCel/
 		
 				//Preenche as variaveis com as informações obtidas no JSP
 			
