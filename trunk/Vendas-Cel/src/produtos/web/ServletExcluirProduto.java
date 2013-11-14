@@ -24,16 +24,16 @@ public class ServletExcluirProduto extends HttpServlet {
 		String nome = request.getParameter("campoExcluirP");
 	
 		try{
-			controlador.excluirProduto(nome);
 			
-			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
-			response.sendRedirect(url);
+			controlador.excluirProduto(nome);
 			
 		} catch (ProdutoInexistenteException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		} catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		}
-
+		
+		String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
+		response.sendRedirect(url);
 	}
 }

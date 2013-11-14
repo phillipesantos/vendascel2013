@@ -15,6 +15,7 @@ public class ProdutoDAO implements IProdutosDAO{
 	
 
 	private Connection conn = null;
+	Produto produto= new Produto();
 	
 	@Override
 	public void addProduto(Produto produto) throws ClassNotFoundException, SQLException{
@@ -100,8 +101,7 @@ public class ProdutoDAO implements IProdutosDAO{
 		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
 		ps.setString(1, nomeProduto);
 		ResultSet rs = ps.executeQuery();
-		Produto produto= new Produto();
-
+		
 		while(rs.next()){
 			produto.setNome(rs.getString("nome"));
 			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
@@ -114,10 +114,12 @@ public class ProdutoDAO implements IProdutosDAO{
 	
 	@Override
 	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
-
-		PreparedStatement ps = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
-		ps.setString(1, nomeProduto);
-
+		
+		if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
+			PreparedStatement ps = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
+			ps.setString(1, nomeProduto);
 		}
+
+	}
 
 }
