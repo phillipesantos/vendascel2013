@@ -28,7 +28,6 @@ public class VendaServlet extends HttpServlet {
 	
 		Venda venda = new Venda();
 		Produto produto = new Produto();
-		Cliente cliente = new Cliente();
 		Date data = new Date();
     	VendaController vendaController = new VendaController();
     	ProdutoController produtoController = new ProdutoController();
@@ -36,19 +35,19 @@ public class VendaServlet extends HttpServlet {
     	try{
     		
     	produto = produtoController.pesquisaProduto(request.getParameter("campoNomeVenda"));   
+    	int quantidade = Integer.parseInt(request.getParameter("campoQuantidadeVenda"));
     	
     
     	 
     	SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");    
     	formatador.format( data );  
     	
-    	venda.setDataDeCompra(data);
-    	produto.getPreco();
-    	produto.getNome();
-    	request.getSession().setAttribute("cliente", cliente);
+    	venda.setDataDeCompra(data);    	
     	
     	
-    	response.sendRedirect("Boleto.jsp");
+    	vendaController.cadastrarVenda(produto.getPreco(), data, quantidade, produto.getNome());
+    	
+    	//response.sendRedirect("Boleto.jsp");
     	}
     	
     	catch (ClassNotFoundException | SQLException e) {

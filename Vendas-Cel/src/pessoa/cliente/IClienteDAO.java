@@ -1,10 +1,11 @@
 package pessoa.cliente;
 
+import java.sql.SQLException;
+
 
 public interface IClienteDAO {
 	
-	public void addCliente(Cliente cliente);
-	public Cliente isExisteCliente(String emal,String senha);
-	public Cliente consultaCpfCliente(String cpfCliente);
+	public void addCliente(Cliente cliente) throws ClassNotFoundException, SQLException;
+
 
 }
