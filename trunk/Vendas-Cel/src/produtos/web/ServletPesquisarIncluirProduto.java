@@ -62,7 +62,7 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				produto.setConexao(request.getParameter("campoConexao"));
 				produto.setCamera(request.getParameter("campoCamera"));
 				produto.setMemoriaInterna(request.getParameter("campoMemoriaInterna"));
-				produto.setQuantidade(Integer.parseInt(request.getParameter("campoQuantidade")));
+				produto.setQuantidade(Long.parseLong(request.getParameter("campoQuantidade")));
 				produto.setPreco(Double.parseDouble(request.getParameter("campoPreco")));
 				
 				ProdutoController produtoController = new ProdutoController();
