@@ -31,19 +31,11 @@ public class ProdutoController {
 		daoProduto.addProduto(produto);
 	}
 	
-	/*public Produto pesquisaProduto(String nomeProduto) throws ProdutoInexistenteException{
-			
-		Produto produto = null;
-		
-		produto = daoProduto.consultaProduto(nomeProduto);
-			if(produto==null){
-				throw new ProdutoInexistenteException();	
-			}
-			
-				return produto;	
+	public Produto pesquisaProduto(String nomeProduto) throws ClassNotFoundException, SQLException{
+		return daoProduto.consultaProduto(nomeProduto);	
 	}
 	
-	public void excluirContato(String nomeProduto) throws ProdutoInexistenteException{
+	/*public void excluirContato(String nomeProduto) throws ProdutoInexistenteException{
 	
 		if(daoProduto.isExisteProduto(nomeProduto)){
 			daoProduto.excluirProduto(nomeProduto);	

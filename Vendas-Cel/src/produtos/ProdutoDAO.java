@@ -38,17 +38,6 @@ public class ProdutoDAO implements IProdutosDAO{
 	}
 
 	
-	/*public boolean isExisteProduto(String nomeProduto){
-		boolean existe = false;
-		for (Produto produto : meusProdutos) {
-			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
-				existe = true;
-			}
-		}
-		
-		return existe;
-	
-	}*/
 	
 	public Produto consultaProduto(String nomeProduto) throws SQLException, ClassNotFoundException{
 		this.conn = Conexao.getConexao();
