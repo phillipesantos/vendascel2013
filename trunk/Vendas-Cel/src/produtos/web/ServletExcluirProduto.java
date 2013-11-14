@@ -24,9 +24,7 @@ public class ServletExcluirProduto extends HttpServlet {
 		String nome = request.getParameter("campoExcluirP");
 	
 		try{
-			controlador.excluirContato(nome);
-		}catch (ProdutoInexistenteException e) {
-			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
+			controlador.excluirProduto(nome);
 		} catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		}

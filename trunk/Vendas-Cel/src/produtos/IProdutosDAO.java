@@ -9,6 +9,5 @@ public interface IProdutosDAO {
 	public Produto consultaProduto(String nomeProduto)throws SQLException, ClassNotFoundException;
 	//public void alterarProduto(String nomeAntigo, Produto produto);
 	public void excluirProduto(String produto)throws ClassNotFoundException, SQLException;
-	public boolean existeProduto(String nome)throws ClassNotFoundException, SQLException;
-
+	
 }
