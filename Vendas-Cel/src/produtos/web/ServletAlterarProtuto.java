@@ -40,7 +40,7 @@ public class ServletAlterarProtuto extends HttpServlet {
 		String mensagemConfirmacao = "Produto Alterado com Sucesso!";
 		
 		try {
-			produtoController.alterarProduto(nomeAntigo,produtoAlterado);
+			produtoController.alterarProduto(nomeAntigo);
 			
 			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
 			response.sendRedirect(url);

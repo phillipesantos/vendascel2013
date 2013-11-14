@@ -73,17 +73,16 @@ public class ProdutoDAO implements IProdutosDAO{
 	}
 	
 	
-	public void alterarProduto(String nomeAntigo, Produto produtoAlterado) throws ClassNotFoundException, SQLException {
-		this.conn = Conexao.getConexao();
+	public void alterarProduto(String nomeAntigo) throws ClassNotFoundException, SQLException {
 		
-		PreparedStatement ps = conn.prepareStatement("UPDATE produto WHERE nome = ?");
 		Statement stmt = conn.createStatement(); 
-		if(produtoAlterado.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
-			stmt.executeUpdate("UPDATE produto SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
-			+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"
-			+ produtoAlterado.getCor() + "', tamanho= '"+ produtoAlterado.getTamanho()+"', tamanhotela= '"+produtoAlterado.getTamanho()+"', modelo ='"
-			+ produtoAlterado.getModelo() + "' conexao='"+ produtoAlterado.getConexao()+ "', camera= '" + produtoAlterado.getCamera() + "', memoriainterna = '"
-			+ produtoAlterado.getMemoriaInterna() + "', quantidade= '" + produtoAlterado.getQuantidade() + "', preco= '" + produtoAlterado.getPreco() + "'  WHERE nome = '" + produtoAlterado.getNome() + "'");
+		
+		if(produto.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
+			stmt.executeUpdate("UPDATE produto SET nome = '" + produto.getNome() + "', fabricante = '"
+			+ produto.getFabricante() + "', sistemaoperacional = '"+ produto.getSistemaOperacional()+"', cor = '"
+			+ produto.getCor() + "', tamanho= '"+ produto.getTamanho()+"', tamanhotela= '"+produto.getTamanho()+"', modelo ='"
+			+ produto.getModelo() + "' conexao='"+ produto.getConexao()+ "', camera= '" + produto.getCamera() + "', memoriainterna = '"
+			+ produto.getMemoriaInterna() + "', quantidade= '" + produto.getQuantidade() + "', preco= '" + produto.getPreco() + "'  WHERE nome = '" + produto.getNome() + "'");
 		}
 	}
 	
