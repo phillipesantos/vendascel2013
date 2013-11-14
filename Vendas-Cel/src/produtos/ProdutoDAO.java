@@ -74,8 +74,10 @@ public class ProdutoDAO implements IProdutosDAO{
 	
 	
 	public void alterarProduto(String nomeAntigo, Produto produtoAlterado) throws ClassNotFoundException, SQLException {
-		Statement stmt = conn.createStatement(); 
+		this.conn = Conexao.getConexao();
 		
+		PreparedStatement ps = conn.prepareStatement("UPDATE produto WHERE nome = ?");
+		Statement stmt = conn.createStatement(); 
 		if(produtoAlterado.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
 			stmt.executeUpdate("UPDATE produto SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
 			+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"

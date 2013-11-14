@@ -20,7 +20,7 @@ public class ServletAlterarProtuto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produtoAlterado = new Produto();
-		String nomeAntigo=request.getParameter("respostaCampoNome");
+		String nomeAntigo=request.getParameter("nomeAntigo");
 		
 		produtoAlterado.setNome(request.getParameter("respostaCampoNome"));
 		produtoAlterado.setFabricante(request.getParameter("respostaCampoFabricante"));
@@ -44,11 +44,9 @@ public class ServletAlterarProtuto extends HttpServlet {
 			
 			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
 			response.sendRedirect(url);
-		} catch (ClassNotFoundException e) {
-			mensagemConfirmacao = e.getMessage();
-		} catch (SQLException e) {
-			mensagemConfirmacao = e.getMessage();
-		}
+		} catch (ClassNotFoundException | SQLException e) {
+			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
+    	}
 		
 	}
 
