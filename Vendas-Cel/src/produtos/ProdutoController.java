@@ -30,8 +30,16 @@ public class ProdutoController {
 		daoProduto.addProduto(produto);
 	}
 	
-	public Produto pesquisaProduto(String nomeProduto) throws ClassNotFoundException, SQLException{
-		return daoProduto.consultaProduto(nomeProduto);
+	public Produto pesquisaProduto(String nomeProduto) throws ProdutoInexistenteException,ClassNotFoundException, SQLException{
+		Produto produto=null;
+		
+		produto = daoProduto.consultaProduto(nomeProduto);
+		
+		if(produto == null){
+			throw new ProdutoInexistenteException();
+		}
+		
+		return produto;
 	
 	}
 	
