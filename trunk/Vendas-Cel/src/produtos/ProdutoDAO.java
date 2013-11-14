@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
+import java.util.LinkedList;
 
 import conexao.Conexao;
 
@@ -42,11 +44,29 @@ public class ProdutoDAO implements IProdutosDAO{
 	public Produto consultaProduto(String nomeProduto) throws SQLException, ClassNotFoundException{
 		this.conn = Conexao.getConexao();
 		
-		Produto produtoEncontrado = null;
-		
+			
 		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
 		ps.setString(1, nomeProduto);
-		ResultSet rs = ps.executeQuery();	
+		
+		ResultSet rs = ps.executeQuery();
+		Produto produtoEncontrado = null;
+		
+		while(rs.next()){
+			Produto produto= new Produto();
+			produto.setNome(rs.getString("nome"));
+			produto.setFabricante(rs.getString("fabricante"));
+			produto.setSistemaOperacional(rs.getString("sistemaoperacional"));
+			produto.setCor(rs.getString("cor"));
+			produto.setTamanho(rs.getString("tamanho"));
+			produto.setTamanhoTela(rs.getString("tamanhotela"));
+			produto.setModelo(rs.getString("modelo"));
+			produto.setConexao(rs.getString("conexao"));
+			produto.setCamera(rs.getString("camera"));
+			produto.setMemoriaInterna(rs.getString("memoriainterna"));
+			//produto.setQuantidade(rs.Int(quantidade));
+			//produto.setPreco(rs.Double(preco));
+			produto=produtoEncontrado;
+		}
 		
 		return produtoEncontrado;
 	}
