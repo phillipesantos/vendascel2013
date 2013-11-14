@@ -48,23 +48,22 @@ public class ProdutoDAO implements IProdutosDAO{
 		
 		return existe;
 	
-	}
+	}*/
 	
-	public Produto consultaProduto(String nomeProduto){
+	public Produto consultaProduto(String nomeProduto) throws SQLException, ClassNotFoundException{
+		this.conn = Conexao.getConexao();
+		
 		Produto produtoEncontrado = null;
-			
-		for (Produto produto : meusProdutos) {
-			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
-				produtoEncontrado = produto;				
-				break;
-			}
-			
-		}
+		
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
+		ps.setString(1, nomeProduto);
+		ResultSet rs = ps.executeQuery();	
+		
 		return produtoEncontrado;
 	}
 	
 	
-	@Override
+	/*@Override
 	public void alterarProduto(String nomeAntigo, Produto produto) {
 		for (Produto produtoAntigo : meusProdutos) {
 			if(produtoAntigo.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
