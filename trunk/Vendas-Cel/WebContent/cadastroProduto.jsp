@@ -23,25 +23,9 @@
 			<font face="Verdana, Arial">
 			<center>
 
-				<form id="form1" action="ServletPesquisarIncluirProduto" method="get">
+				<form id="form1" action="ServletPesquisarIncluirProduto" method="post" onsubmit="campoEmBrancoProduto()">
 
-					<table id="tabela1" border="0" width="483px">
-						<tr>
-							<td align="right">Pesquisa de Produdo: </td>
-							<td>
-								<input type="text" id="campoPesquisaP" name="campoPesquisaP" onkeyup="passaParaMaiusculo(this)" required/>
-								<input type="submit" id="validarBusca"  name="validarBusca" style="height:25px;" value="Pesquisar" />
-							</td>
-						</tr>
-					</table>
-
-				</form>
-
-				<br />
-
-				<form id="form2" action="ServletPesquisarIncluirProduto" method="post" onsubmit="campoEmBrancoProduto()">
-
-					<table id="tabela2" border="0">
+					<table id="tabela1" border="0">
 
 						<tr>
 							<td align="right">Nome: </td>
@@ -112,8 +96,39 @@
 						</tr>
 
 					</table>
-				</form>	
+				</form>
 				
+				<br />
+					
+				<form id="form2" action="ServletPesquisarIncluirProduto" method="get">
+
+					<table id="tabela2" border="0" width="483px">
+						<tr>
+							<td align="right">Pesquisa de Produdo: </td>
+							<td>
+								<input type="text" id="campoPesquisaP" name="campoPesquisaP" placeholder="nome do produto" onkeyup="passaParaMaiusculo(this)" required/>
+								<input type="submit" id="validarBusca"  name="validarBusca" style="height:25px;" value="Pesquisar" />
+							</td>
+						</tr>
+					</table>
+
+				</form>
+
+				<br />
+				
+				<form id="form3" action="ServletExcluirProduto" method="post">
+
+					<table id="tabela3" border="0" width="483px">
+						<tr>
+							<td align="right">Excuir Produdo: </td>
+							<td>
+								<input type="text" id="campoExcuirP" name="campoExcuirP" placeholder="nome do produto" onkeyup="passaParaMaiusculo(this)" required/>
+								<input type="submit" id="validarExclusao"  name="validarExclusao" style="height:25px;" value="Excluir" />
+							</td>
+						</tr>
+					</table>
+
+				</form>
 			</center>
 		</font>	
 	</body>

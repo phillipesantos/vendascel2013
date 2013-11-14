@@ -2,6 +2,8 @@ package produtos;
 
 import java.sql.SQLException;
 
+import produtos.exception.ProdutoInexistenteException;
+
 public class ProdutoController {
 	
 	private IProdutosDAO daoProduto = new ProdutoDAO();	
@@ -32,17 +34,16 @@ public class ProdutoController {
 		return daoProduto.consultaProduto(nomeProduto);	
 	}
 	
-	/*public void excluirContato(String nomeProduto) throws ProdutoInexistenteException{
-	
-		if(daoProduto.isExisteProduto(nomeProduto)){
-			daoProduto.excluirProduto(nomeProduto);	
+	public void excluirContato(String nomeProduto) throws ClassNotFoundException, SQLException,ProdutoInexistenteException{
+		if(daoProduto.existeProduto(nomeProduto)){
+			daoProduto.existeProduto(nomeProduto);	
 		} else {
 			throw new ProdutoInexistenteException();
 		}
 	}
 	
+	/*
 	public void alterarProduto(String nomeAntigo, Produto produto){
-				
 		daoProduto.alterarProduto(nomeAntigo, produto);
 	}*/
 	
