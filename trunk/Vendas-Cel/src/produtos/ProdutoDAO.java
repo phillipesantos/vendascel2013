@@ -77,7 +77,7 @@ public class ProdutoDAO implements IProdutosDAO{
 	public void alterarProduto(Produto produtoAlterado) throws ClassNotFoundException, SQLException {
 		Statement stmt = conn.createStatement(); 
 		
-		stmt.executeUpdate("UPDATE cliente SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
+		stmt.executeUpdate("UPDATE produto SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
 		+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"
 		+ produtoAlterado.getCor() + "', tamanho= '"+ produtoAlterado.getTamanho()+"', tamanhotela= '"+produtoAlterado.getTamanho()+"', modelo ='"
 		+ produtoAlterado.getModelo() + "' conexao='"+ produtoAlterado.getConexao()+ "', camera= '" + produtoAlterado.getCamera() + "', memoriainterna = '"
