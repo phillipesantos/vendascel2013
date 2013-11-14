@@ -36,8 +36,9 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
     	
 		response.sendRedirect(url);
     	}
-    	
-    	catch (ClassNotFoundException | SQLException e) {
+    	catch (ProdutoInexistenteException e) {
+			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
+    	}catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
     	}
 	} 	
