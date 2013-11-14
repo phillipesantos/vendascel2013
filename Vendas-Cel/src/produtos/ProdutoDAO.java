@@ -33,7 +33,7 @@ public class ProdutoDAO implements IProdutosDAO{
 		pstmt.setString(8, produto.getConexao());
 		pstmt.setString(9, produto.getCamera());
 		pstmt.setString(10, produto.getMemoriaInterna());
-		pstmt.setInt(11, produto.getQuantidade());
+		pstmt.setLong(11, produto.getQuantidade());
 		pstmt.setDouble(12, produto.getPreco());
 		pstmt.executeUpdate();
 
@@ -63,9 +63,9 @@ public class ProdutoDAO implements IProdutosDAO{
 			produto.setConexao(rs.getString("conexao"));
 			produto.setCamera(rs.getString("camera"));
 			produto.setMemoriaInterna(rs.getString("memoriainterna"));
-			//produto.setQuantidade(rs.Int(quantidade));
-			//produto.setPreco(rs.Double(preco));
-			produto=produtoEncontrado;
+			produto.setQuantidade(rs.getLong("quantidade"));
+			produto.setPreco(rs.getLong("preco"));
+			produtoEncontrado=produto;
 		}
 		
 		return produtoEncontrado;

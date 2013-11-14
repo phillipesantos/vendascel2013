@@ -13,7 +13,7 @@ public class Produto {
 	private String modelo;
 	private String camera;
 	private String memoriaInterna;
-	private int quantidade;
+	private long quantidade;
 	private double preco;
 	
 		
@@ -104,10 +104,10 @@ public class Produto {
 	}
 
 	
-	public int getQuantidade() {
+	public long getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(long quantidade) {
 		this.quantidade = quantidade;
 	}
 	

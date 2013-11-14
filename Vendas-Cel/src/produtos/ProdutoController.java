@@ -8,7 +8,7 @@ public class ProdutoController {
 	
 	public void CadastrarProdutos(String nome, String fabricante, String sistemaOperacional,
 			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
-			String camera, String memoriaInterna, int quantidade, double preco) throws ClassNotFoundException, SQLException{
+			String camera, String memoriaInterna, long quantidade, double preco) throws ClassNotFoundException, SQLException{
 		
 		Produto produto= new Produto();
 		
