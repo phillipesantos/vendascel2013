@@ -34,12 +34,9 @@ public class ProdutoController {
 		return daoProduto.consultaProduto(nomeProduto);	
 	}
 	
-	public void excluirContato(String nomeProduto) throws ClassNotFoundException, SQLException,ProdutoInexistenteException{
-		if(daoProduto.existeProduto(nomeProduto)){
-			daoProduto.existeProduto(nomeProduto);	
-		} else {
-			throw new ProdutoInexistenteException();
-		}
+	public void excluirProduto(String nomeProduto) throws ClassNotFoundException, SQLException{
+		daoProduto.excluirProduto(nomeProduto);	
+	
 	}
 	
 	/*

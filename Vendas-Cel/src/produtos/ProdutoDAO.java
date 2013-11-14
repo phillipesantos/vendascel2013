@@ -93,30 +93,22 @@ public class ProdutoDAO implements IProdutosDAO{
 			}
 		}
 	}*/
-
-	public boolean existeProduto(String nome) throws ClassNotFoundException, SQLException {
-		
-		Produto produto= new Produto();
-		
-		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
-		ps.setString(1, nome);
-		ResultSet rs = ps.executeQuery();
-		
-			if(produto.getNome().toUpperCase().equals(rs.getString("nome").toUpperCase())){
-				return true;
-			}
-	
-		return false;
-	}
 	
 	@Override
 	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
 		this.conn = Conexao.getConexao();
 		
-		         PreparedStatement ps = conn.prepareStatement("DELETE FROM contatos WHERE nome=?");
-		         ps.setString(1, nomeProduto);
-		         
-		         
+		Produto produto= new Produto();
+		
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
+		ps.setString(1, nomeProduto);
+		ResultSet rs = ps.executeQuery();
+		
+			if(produto.getNome().toUpperCase().equals(rs.getString("nome").toUpperCase())){
+				 PreparedStatement ps2 = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
+		         ps2.setString(1, nomeProduto);
+			}
+		      		         
 		}
 	}
  
