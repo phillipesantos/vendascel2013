@@ -68,7 +68,8 @@ public class ServletPesquisarIncluirProduto extends HttpServlet {
 				
 				try {
 				produtoController.CadastrarProdutos(produto.getNome(), produto.getFabricante(), produto.getSistemaOperacional(),produto.getCor(),
-						produto.getTamanho(), produto.getTamanhoTela(), produto.getModelo(), produto.getConexao(), produto.getCamera(), produto.getMemoriaInterna(), produto.getQuantidade(), produto.getPreco());
+						produto.getTamanho(), produto.getTamanhoTela(), produto.getModelo(), produto.getConexao(), produto.getCamera(),
+						produto.getMemoriaInterna(), produto.getQuantidade(), produto.getPreco());
 				} catch (ClassNotFoundException e) {
 					mensagemConfirmacao = e.getMessage();
 				} catch (SQLException e) {

@@ -15,7 +15,7 @@ public class ProdutoDAO implements IProdutosDAO{
 	
 
 	private Connection conn = null;
-	Produto produto= new Produto();
+	Produto produto = new Produto();
 	
 	@Override
 	public void addProduto(Produto produto) throws ClassNotFoundException, SQLException{
@@ -73,26 +73,16 @@ public class ProdutoDAO implements IProdutosDAO{
 	}
 	
 	
-	/*@Override
-	public void alterarProduto(String nomeAntigo, Produto produto) {
-		for (Produto produtoAntigo : meusProdutos) {
-			if(produtoAntigo.getNome().toUpperCase().equals(nomeAntigo.toUpperCase())){
-				produtoAntigo.setNome(produto.getNome());
-				produtoAntigo.setFabricante(produto.getFabricante());
-				produtoAntigo.setSistemaOperacional(produto.getSistemaOperacional());
-				produtoAntigo.setCor(produto.getCor());
-				produtoAntigo.setTamanho(produto.getTamanho());
-				produtoAntigo.setTamanhoTela(produto.getTamanhoTela());
-				produtoAntigo.setModelo(produto.getModelo());
-				produtoAntigo.setConexao(produto.getConexao());
-				produtoAntigo.setCamera(produto.getCamera());
-				produtoAntigo.setMemoriaInterna(produto.getMemoriaInterna());
-				produtoAntigo.setQuantidade(produto.getQuantidade());
-				produtoAntigo.setPreco(produto.getPreco());
-				break;
-			}
-		}
-	}*/
+	@Override
+	public void alterarProduto(Produto produtoAlterado) throws ClassNotFoundException, SQLException {
+		Statement stmt = conn.createStatement(); 
+		
+		stmt.executeUpdate("UPDATE cliente SET nome = '" + produtoAlterado.getNome() + "', fabricante = '"
+		+ produtoAlterado.getFabricante() + "', sistemaoperacional = '"+ produtoAlterado.getSistemaOperacional()+"', cor = '"
+		+ produtoAlterado.getCor() + "', tamanho= '"+ produtoAlterado.getTamanho()+"', tamanhotela= '"+produtoAlterado.getTamanho()+"', modelo ='"
+		+ produtoAlterado.getModelo() + "' conexao='"+ produtoAlterado.getConexao()+ "', camera= '" + produtoAlterado.getCamera() + "', memoriainterna = '"
+		+ produtoAlterado.getMemoriaInterna() + "', quantidade= '" + produtoAlterado.getQuantidade() + "', preco= '" + produtoAlterado.getPreco() + "'  WHERE nome = '" + produtoAlterado.getNome() + "'");
+	}
 	
 	
 	public boolean existeProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
