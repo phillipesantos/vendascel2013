@@ -99,16 +99,20 @@ public class ProdutoDAO implements IProdutosDAO{
 		this.conn = Conexao.getConexao();
 		
 		Produto produto= new Produto();
+		String nome;
 		
 		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
 		ps.setString(1, nomeProduto);
 		ResultSet rs = ps.executeQuery();
 		
-			if(produto.getNome().toUpperCase().equals(rs.getString("nome").toUpperCase())){
+		while(rs.next()){
+		nome = rs.getString("nome");
+
+			if(produto.getNome().toUpperCase().equals(nome.toUpperCase())){
 				 PreparedStatement ps2 = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
 		         ps2.setString(1, nomeProduto);
-			}
-		      		         
+				}
+			}   		         
 		}
 	}
  
