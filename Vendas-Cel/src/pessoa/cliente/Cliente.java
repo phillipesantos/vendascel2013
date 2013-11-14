@@ -12,7 +12,7 @@ public class Cliente extends Pessoa{
 	
 	public void salvar() {
 		
-		clienteDAO.addCliente(this);
+		//clienteDAO.addCliente(this);
 	}	
 	
 

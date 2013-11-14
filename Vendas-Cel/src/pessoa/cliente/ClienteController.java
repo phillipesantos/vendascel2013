@@ -27,12 +27,7 @@ public class ClienteController {
 			cliente.salvar();
 		}
 
-	public Cliente consultaCpfCliente(String cpfCliente){
-		
-		ClienteDAO clienteDAO = new ClienteDAO();	
-
-		return clienteDAO.consultaCpfCliente(cpfCliente);
-	}
+	
 			
 }
 	

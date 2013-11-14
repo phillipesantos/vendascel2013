@@ -18,7 +18,7 @@
 	
 			<font face="Verdana, Arial"> 
 		<center>	
-			<form action="VendaServlet" method="get" onsubmit="campoEmBrancoVenda.js">
+			<form action="VendaServlet" method="get" onsubmit="campoEmBrancoProduto()">
 				<table>
 								
 					<tr>

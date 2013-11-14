@@ -27,7 +27,7 @@ public class ServletClienteLogin extends HttpServlet {
 		cliente.setSenha(request.getParameter("campoLogSenha"));
 		
 		
-		clienteDAO.isExisteCliente(cliente.getEmail(),cliente.getSenha());
+		//clienteDAO.isExisteCliente(cliente.getEmail(),cliente.getSenha());
 	
 		HttpSession sessao = request.getSession();
 		request.getSession().setAttribute("cliente", cliente);
