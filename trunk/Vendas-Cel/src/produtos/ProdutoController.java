@@ -54,9 +54,9 @@ public class ProdutoController {
 	}
 	
 	
-	public void alterarProduto(String nomeAntigo,Produto produtoAlterado) throws ClassNotFoundException, SQLException{
+	public void alterarProduto(String nomeAntigo) throws ClassNotFoundException, SQLException{
 
-		daoProduto.alterarProduto(nomeAntigo,produtoAlterado);
+		daoProduto.alterarProduto(nomeAntigo);
 	}
 	
 }
