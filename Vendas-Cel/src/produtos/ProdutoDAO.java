@@ -11,6 +11,7 @@ import conexao.Conexao;
 
 
 
+
 public class ProdutoDAO implements IProdutosDAO{
 	
 
@@ -91,16 +92,30 @@ public class ProdutoDAO implements IProdutosDAO{
 				break;
 			}
 		}
-	}
-
-	@Override
-	public void excluirProduto(String nomeProduto) {
-		for (Produto produto : meusProdutos) {
-			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
-				meusProdutos.remove(produto);
-				break;
-			}
-		}
 	}*/
+
+	public boolean existeProduto(String nome) throws ClassNotFoundException, SQLException {
+		
+		Produto produto= new Produto();
+		
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
+		ps.setString(1, nome);
+		ResultSet rs = ps.executeQuery();
+		
+			if(produto.getNome().toUpperCase().equals(rs.getString("nome").toUpperCase())){
+				return true;
+			}
 	
-}
+		return false;
+	}
+	
+	@Override
+	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
+		this.conn = Conexao.getConexao();
+		
+		         PreparedStatement ps = conn.prepareStatement("DELETE FROM contatos WHERE nome=?");
+		         ps.setString(1, nomeProduto);
+		         
+		         
+		}
+	}
