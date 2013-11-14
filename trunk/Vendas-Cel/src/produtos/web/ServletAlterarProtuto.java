@@ -20,8 +20,7 @@ public class ServletAlterarProtuto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Produto produtoAlterado = new Produto();
-		String nomeAntigo=request.getParameter("nomeAntigo");
-		
+				
 		produtoAlterado.setNome(request.getParameter("respostaCampoNome"));
 		produtoAlterado.setFabricante(request.getParameter("respostaCampoFabricante"));
 		produtoAlterado.setSistemaOperacional(request.getParameter("respostaCampoSO"));
@@ -40,7 +39,7 @@ public class ServletAlterarProtuto extends HttpServlet {
 		String mensagemConfirmacao = "Produto Alterado com Sucesso!";
 		
 		try {
-			produtoController.alterarProduto(nomeAntigo);
+			produtoController.alterarProduto(request.getParameter("respostaCampoNome"));
 			
 			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
 			response.sendRedirect(url);
