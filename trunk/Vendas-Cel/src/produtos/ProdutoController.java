@@ -9,13 +9,12 @@ public class ProdutoController {
 	
 	private IProdutosDAO daoProduto = new ProdutoDAO();	
 	
-	public void CadastrarProdutos(int Id, String nome, String fabricante, String sistemaOperacional,
+	public void CadastrarProdutos(String nome, String fabricante, String sistemaOperacional,
 			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
 			String camera, String memoriaInterna, int quantidade, double preco) throws ClassNotFoundException, SQLException{
 		
 		Produto produto= new Produto();
 		
-		produto.setId(Id);
 		produto.setNome(nome);
 		produto.setFabricante(fabricante);
 		produto.setSistemaOperacional(sistemaOperacional);

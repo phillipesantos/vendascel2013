@@ -3,7 +3,6 @@ package produtos;
 public class Produto {
 	
 	private int id;
-	private int ponteiro;	
 	private String nome;
 	private String fabricante;
 	private String sistemaOperacional;
@@ -24,15 +23,6 @@ public class Produto {
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
-	public int getPonteiro() {
-		return ponteiro;
-	}
-	public void setPonteiro(int ponteiro) {
-		this.ponteiro = ponteiro;
-	}
-
 
 	public String getNome() {
 		return nome;
