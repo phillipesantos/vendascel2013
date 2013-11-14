@@ -45,11 +45,27 @@ public class ProdutoController {
 	
 	}
 	
-	/*
-	public void alterarProduto(String nomeAntigo, Produto produto){
-		daoProduto.alterarProduto(nomeAntigo, produto);
-	}*/
 	
-
-
+	public void alterarProduto(String nome, String fabricante, String sistemaOperacional,
+			String cor, String tamanho,String tamanhoTela, String modelo, String conexao,
+			String camera, String memoriaInterna, long quantidade, double preco) throws ClassNotFoundException, SQLException{
+		
+		Produto produtoAlterado= new Produto();
+		
+		produtoAlterado.setNome(nome);
+		produtoAlterado.setFabricante(fabricante);
+		produtoAlterado.setSistemaOperacional(sistemaOperacional);
+		produtoAlterado.setCor(cor);
+		produtoAlterado.setTamanho(tamanho);
+		produtoAlterado.setTamanhoTela(tamanhoTela);
+		produtoAlterado.setModelo(modelo);
+		produtoAlterado.setConexao(conexao);
+		produtoAlterado.setCamera(camera);
+		produtoAlterado.setMemoriaInterna(memoriaInterna);
+		produtoAlterado.setQuantidade(quantidade);
+		produtoAlterado.setPreco(preco);
+		
+		daoProduto.alterarProduto(produtoAlterado);
+	}
+	
 }
