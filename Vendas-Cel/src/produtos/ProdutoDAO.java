@@ -1,11 +1,10 @@
 	package produtos;
 
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Collection;
-import java.util.LinkedList;
 
 import conexao.Conexao;
 
@@ -94,25 +93,29 @@ public class ProdutoDAO implements IProdutosDAO{
 		}
 	}*/
 	
-	@Override
-	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
+	
+	public boolean existeProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
 		this.conn = Conexao.getConexao();
-		
-		Produto produto= new Produto();
-		String nome;
 		
 		PreparedStatement ps = conn.prepareStatement("SELECT * FROM produto WHERE nome = ?");
 		ps.setString(1, nomeProduto);
 		ResultSet rs = ps.executeQuery();
-		
-		while(rs.next()){
-		nome = rs.getString("nome");
+		Produto produto= new Produto();
 
-			if(produto.getNome().toUpperCase().equals(nome.toUpperCase())){
-				 PreparedStatement ps2 = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
-		         ps2.setString(1, nomeProduto);
-				}
-			}   		         
+		while(rs.next()){
+			produto.setNome(rs.getString("nome"));
+			if(produto.getNome().toUpperCase().equals(nomeProduto.toUpperCase())){
+				return true;
+			}
 		}
+			return false;
+			
+		}	
+	
+	@Override
+	public void excluirProduto(String nomeProduto)throws ClassNotFoundException, SQLException {
+		PreparedStatement ps = conn.prepareStatement("DELETE FROM produto WHERE nome=?");
+		ps.setString(1, nomeProduto);
+
 	}
- 
+}

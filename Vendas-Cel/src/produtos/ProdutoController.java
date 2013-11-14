@@ -31,11 +31,17 @@ public class ProdutoController {
 	}
 	
 	public Produto pesquisaProduto(String nomeProduto) throws ClassNotFoundException, SQLException{
-		return daoProduto.consultaProduto(nomeProduto);	
+		return daoProduto.consultaProduto(nomeProduto);
+	
 	}
 	
-	public void excluirProduto(String nomeProduto) throws ClassNotFoundException, SQLException{
-		daoProduto.excluirProduto(nomeProduto);	
+	public void excluirProduto(String nomeProduto) throws ProdutoInexistenteException, ClassNotFoundException, SQLException{
+		
+		if(daoProduto.existeProduto(nomeProduto)){
+			daoProduto.excluirProduto(nomeProduto);	
+		} else {
+			throw new ProdutoInexistenteException();
+		}
 	
 	}
 	

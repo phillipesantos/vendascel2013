@@ -1,7 +1,6 @@
 package produtos.web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -26,11 +25,15 @@ public class ServletExcluirProduto extends HttpServlet {
 	
 		try{
 			controlador.excluirProduto(nome);
+			
+			String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
+			response.sendRedirect(url);
+			
+		} catch (ProdutoInexistenteException e) {
+			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		} catch (ClassNotFoundException | SQLException e) {
 			response.sendRedirect("telaConfirmacao.jsp?msg="+ e.getMessage());
 		}
-	
-		String url = "telaConfirmacao.jsp?msg=" + mensagemConfirmacao;
-		response.sendRedirect(url);
+
 	}
 }
